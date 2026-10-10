@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Document Repository – Institute of Archaeology, Pt. Deendayal Upadhyaya Campus</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <style>
+    @layer base {
+      html, body { margin:0; padding:0; }
+      body { overscroll-behavior:none; }
+      main>:first-child { margin-top:0!important; }
+      main>:last-child { margin-bottom:0!important; }
+    }
+    ::-webkit-scrollbar { display:none; }
+  .nav-tab-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #55433e;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid transparent;
+}
+.nav-tab-item:hover {
+  color: #6e2510;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-color: rgba(140, 59, 36, 0.35);
+  box-shadow: 0 0 16px rgba(140, 59, 36, 0.25), 0 0 4px rgba(140, 59, 36, 0.15);
+  transform: translateY(-1px);
+}
+.nav-tab-item.active {
+  background-color: #8c3b24;
+  color: #ffffff;
+  border-color: #8c3b24;
+  box-shadow: 0 2px 10px rgba(140, 59, 36, 0.35);
+}
+html.font-size-decrease {
+  font-size: 87.5% !important;
+}
+html.font-size-increase {
+  font-size: 112.5% !important;
+}
+</style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/accessibility.js" defer></script>
+  <script id="tailwind-config">
+    tailwind.config={
+      darkMode:"class",
+      theme:{
+        extend:{
+          colors:{
+            "inverse-primary":"#ffb5a0","outline":"#88726c","surface":"#fdf9f4","secondary":"#655d59",
+            "on-primary-fixed":"#3b0900","primary-fixed":"#ffdbd1","on-primary":"#ffffff","secondary-container":"#ece0db",
+            "tertiary":"#593400","surface-dim":"#ddd9d5","on-surface":"#1c1c19","secondary-fixed-dim":"#cfc4bf",
+            "primary-container":"#8c3b24","on-secondary-fixed-variant":"#4d4542","error-container":"#ffdad6",
+            "on-error":"#ffffff","on-error-container":"#93000a","tertiary-fixed-dim":"#fbba6f","inverse-surface":"#31302d",
+            "on-secondary-container":"#6b635f","surface-tint":"#99452d","on-primary-fixed-variant":"#7b2e18",
+            "background":"#fdf9f4","surface-bright":"#fdf9f4","tertiary-container":"#784904","on-secondary":"#ffffff",
+            "surface-container-high":"#ebe8e3","surface-container-highest":"#e6e2dd","on-tertiary-container":"#fdbb70",
+            "primary":"#6e2510","tertiary-fixed":"#ffddba","secondary-fixed":"#ece0db","inverse-on-surface":"#f4f0eb",
+            "on-tertiary-fixed-variant":"#673d00","on-tertiary":"#ffffff","surface-container-low":"#f7f3ee",
+            "primary-fixed-dim":"#ffb5a0","surface-container":"#f1ede8","on-primary-container":"#ffb7a4",
+            "on-background":"#1c1c19","surface-container-lowest":"#ffffff","outline-variant":"#dbc1ba",
+            "on-surface-variant":"#55433e","on-secondary-fixed":"#201a18","error":"#ba1a1a","surface-variant":"#e6e2dd",
+            "on-tertiary-fixed":"#2b1700"
+          },
+          borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},
+          spacing:{
+            "gutter-desktop":"2rem","space-3xl":"4rem","space-4xl":"6rem","space-xs":"0.5rem","space-2xl":"3rem",
+            "container-max":"1280px","space-xxs":"0.25rem","margin-mobile":"1rem","space-lg":"1.5rem",
+            "margin-tablet":"2rem","gutter-mobile":"1rem","gutter-tablet":"1.5rem","space-xl":"2rem",
+            "space-sm":"0.75rem","space-md":"1rem","margin-desktop":"3rem"
+          },
+          fontFamily:{
+            "title-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],
+            "display-hero-mobile":["Noto Serif"],"headline-sm":["Noto Serif"],"display-hero":["Noto Serif"],
+            "headline-md":["Noto Serif"],"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],
+            "body-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-lg":["Noto Serif"],
+            "title-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Noto Serif"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface">
+
+  <!-- HEADER (Identical to index.html) -->
+  <header class="fixed top-0 w-full z-50 bg-surface shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+  <!-- Top Sovereign Bar with Search replacing screen reader -->
+  <div class="bg-inverse-surface text-inverse-on-surface">
+    <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop h-10 flex items-center justify-between text-body-sm">
+      <div class="flex items-center gap-space-md">
+        <span class="font-label-md text-label-md tracking-wider uppercase opacity-90">भारत सरकार | Government of India</span>
+        <span class="hidden sm:inline-block opacity-40">|</span>
+        <span class="hidden sm:inline-block font-label-md text-label-md opacity-90">संस्कृति मंत्रालय | Ministry of Culture</span>
+      </div>
+      <div class="flex items-center gap-space-sm sm:gap-space-md">
+        <div class="hidden md:flex items-center gap-space-xs font-label-sm text-label-sm">
+          <button data-font-size="decrease" aria-label="Decrease font size" class="px-space-xs py-space-xxs hover:bg-surface/20 rounded transition-colors" type="button">A-</button>
+          <button data-font-size="reset" aria-label="Reset font size" class="px-space-xs py-space-xxs hover:bg-surface/20 rounded transition-colors font-bold" type="button">A</button>
+          <button data-font-size="increase" aria-label="Increase font size" class="px-space-xs py-space-xxs hover:bg-surface/20 rounded transition-colors" type="button">A+</button>
+        </div>
+        <span class="hidden md:inline-block opacity-40">|</span>
+        <div class="flex items-center gap-space-xxs font-label-sm text-label-sm">
+          <a class="px-space-xs py-space-xxs text-inverse-on-surface hover:text-on-primary-container transition-colors" href="hi/index.html">हिन्दी</a>
+        </div>
+        <span class="hidden sm:inline-block opacity-40">|</span>
+        <!-- Search bar shifted to top right (replacing screen reader tab) -->
+        <div class="relative flex items-center">
+          <span class="material-symbols-outlined absolute left-2.5 text-[#cfc4bf] text-[16px] pointer-events-none">search</span>
+          <input class="bg-white/10 border border-white/20 pl-8 pr-3 py-1 text-xs text-inverse-on-surface placeholder:text-inverse-on-surface/60 rounded-md focus:outline-none focus:bg-white/20 focus:border-white/40 w-40 sm:w-56 transition-all" placeholder="Search archives, syllabi..." type="search">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Institute Identity Bar -->
+  <div class="bg-surface-container-low border-b border-[#dbc1ba]/20">
+    <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-sm flex items-center justify-between gap-space-md">
+      <div class="flex items-center gap-space-md lg:gap-space-lg">
+        <a href="index.html" class="flex items-center gap-space-md lg:gap-space-lg">
+          <img alt="Institute of Archaeology Logo" class="w-auto object-contain h-14" src="assets/images/ioa-logo.svg">
+          <div class="flex flex-col justify-center">
+            <span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-tight">Institute of Archaeology, Pt. Deendayal Upadhyaya Campus</span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-0.5">Archaeological Survey of India • Knowledge Park II, Greater Noida</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar with Individual Tabs and Diffused Glow Hover -->
+  <div class="bg-surface shadow-[0_2px_12px_rgba(0,0,0,0.05)] border-b border-[#dbc1ba]/30">
+    <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop h-14 flex items-center justify-between">
+      <nav class="hidden lg:flex items-center gap-1 xl:gap-2 h-full py-1">
+        <a href="index.html#about-institute" class="nav-tab-item">About Us</a>
+        <a href="index.html#courses-offered" class="nav-tab-item">Academic Programmes</a>
+        <a href="docs.html?category=research-excavation" class="nav-tab-item">Research & Excavations</a>
+        <a href="gallery.html" class="nav-tab-item">Gallery</a>
+        <a href="coming-soon.html?page=Student+Portal" class="nav-tab-item">Student Portal</a>
+        <a href="docs.html?category=admissions" class="nav-tab-item">Admissions</a>
+        <a href="docs.html?category=notifications-tenders" class="nav-tab-item active">Notifications & Tenders</a>
+        <a href="whos-who.html" class="nav-tab-item">Who's Who</a>
+        <a href="index.html#contact-section" class="nav-tab-item">Contact</a>
+        
+      </nav>
+      <div class="lg:hidden flex items-center justify-between w-full">
+        <span class="font-label-md text-primary font-bold">Navigation Menu</span>
+        <button aria-label="Open navigation menu" class="flex items-center justify-center p-space-xs text-on-surface-variant hover:text-on-surface" type="button">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <!-- MAIN -->
+  <main class="w-full pt-44 bg-surface min-h-[calc(100vh-200px)]">
+    <!-- Breadcrumb Bar -->
+    <div class="w-full bg-surface-container-low border-b border-[#dbc1ba]/30 py-space-xs">
+      <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between text-body-sm">
+        <nav aria-label="Breadcrumb" class="flex items-center gap-space-xxs text-secondary font-label-sm">
+          <a href="index.html" class="hover:text-primary transition-colors flex items-center gap-space-xxs">
+            <span class="material-symbols-outlined text-[16px]">home</span>Home
+          </a>
+          <span>/</span>
+          <span class="text-secondary">Official Documents</span>
+          <span>/</span>
+          <span id="breadcrumb-category" class="text-primary font-bold">Notifications &amp; Tenders</span>
+        </nav>
+        <div class="flex items-center gap-2">
+          <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-[#3b5342] bg-[#3b5342]/10 px-2 py-0.5 rounded-full">
+            <span class="w-2 h-2 rounded-full bg-[#3b5342] animate-ping"></span> Live Folder Sync
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section with Tab Switcher -->
+    <section class="w-full bg-surface-container-low py-space-xl border-b border-[#dbc1ba]/30">
+      <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop space-y-space-md">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+          <div>
+            <div class="inline-flex items-center gap-space-xxs text-primary font-label-sm uppercase tracking-widest font-bold mb-1">
+              <span class="material-symbols-outlined text-[16px]">folder_open</span> <span id="section-badge">Gazetted Repositories &amp; Bulletins</span>
+            </div>
+            <h1 id="page-title" class="font-headline-lg text-headline-lg text-primary">Notifications, Tenders &amp; RFPs</h1>
+            <p id="page-desc" class="font-body-sm text-body-sm text-secondary mt-1 max-w-2xl leading-relaxed">
+              Official publications, public tenders, gazetted procurement documents, and expressions of interest published by the Institute of Archaeology.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Documents Grid / List Section -->
+    <section class="w-full py-space-2xl">
+      <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+
+        <!-- Empty State -->
+        <div id="empty-state" class="hidden text-center py-16 space-y-3 bg-white/50 rounded-2xl border border-dashed border-[#dbc1ba]">
+          <span class="material-symbols-outlined text-[54px] text-secondary">cloud_off</span>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface">No Documents Found</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-md mx-auto">
+            No gazetted documents are currently available in this section. Please check back later.
+          </p>
+        </div>
+
+        <!-- Document Cards Grid -->
+        <div id="docs-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter-desktop">
+          <!-- Dynamically populated via JS -->
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (Identical to index.html) -->
+  <footer class="w-full bg-surface-container-low mt-space-3xl" id="contact-section">
+    <!-- External Portals Bar -->
+    <div class="bg-surface-container">
+      <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-lg flex flex-wrap items-center justify-between gap-space-md text-on-surface-variant font-label-md text-label-md">
+        <span class="font-bold uppercase tracking-wider text-tertiary">External Portals:</span>
+        <a class="text-on-surface-variant hover:text-primary transition-colors" href="https://www.mygov.in" rel="noreferrer" target="_blank">MyGov Citizen Engagement</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors" href="https://asi.nic.in" rel="noreferrer" target="_blank">Archaeological Survey of India</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors" href="https://indiaculture.gov.in" rel="noreferrer" target="_blank">Ministry of Culture</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors" href="https://www.incredibleindia.org" rel="noreferrer" target="_blank">Incredible India</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors" href="https://ncf.nic.in" rel="noreferrer" target="_blank">National Culture Fund</a>
+      </div>
+    </div>
+
+    <!-- 4-Column Directory Grid -->
+    <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-3xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop">
+        <div class="space-y-space-md">
+          <div class="space-y-space-xs">
+            <h4 class="font-headline-sm text-headline-sm text-primary leading-snug">Institute of Archaeology, Pt. Deen Dayal Upadhyaya</h4>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">The premier academic and research institution under the Ministry of Culture, dedicated to postgraduate archaeology and monument conservation.</p>
+        </div>
+
+        <div class="space-y-space-md">
+          <h5 class="font-title-md text-title-md text-on-surface font-bold">Academic Wings</h5>
+          <ul class="space-y-space-xs text-body-sm font-body-sm text-on-surface-variant">
+            <li><a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="index.html#courses-offered"><span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>Postgraduate Diploma in Archaeology (PGDA)</a></li>
+            <li><a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="docs.html?category=admissions"><span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>Admissions &amp; Prospectus 2027</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-space-md">
+          <h5 class="font-title-md text-title-md text-on-surface font-bold">Public Governance</h5>
+          <ul class="space-y-space-xs text-body-sm font-body-sm text-on-surface-variant">
+            <li><a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="#"><span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>Right to Information (RTI Cell)</a></li>
+            <li><a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="#"><span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>Citizens' Charter &amp; Redressal</a></li>
+            <li><a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="docs.html?category=notifications-tenders"><span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>Tenders, RFPs &amp; Public Auctions</a></li>
+            <li><a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="#"><span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>Central Archaeological Library Access</a></li>
+            <li><a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="#"><span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>Annual Archaeological Reviews (IAR)</a></li>
+            <li><a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="whos-who.html"><span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>Who's Who (Directory)</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-space-md">
+          <h5 class="font-title-md text-title-md text-on-surface font-bold">Campus Location</h5>
+          <div class="space-y-space-xs text-body-sm font-body-sm text-on-surface-variant">
+            <p class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">location_on</span>Plot No. 2, Knowledge Park-II, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh – 201310, India</p>
+            <p class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary shrink-0">call</span>Telephone: +91-120-2333100</p>
+            <p class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary shrink-0">mail</span>Email: administrator.ioa@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright Strip -->
+    <div class="bg-surface-container-high py-space-lg">
+      <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant font-body-sm text-body-sm">
+        <p>© 2026 Archaeological Survey of India (ASI), Ministry of Culture, Govt. of India. All Rights Reserved.</p>
+        <div class="flex flex-wrap items-center gap-space-md font-label-md text-label-md">
+          <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+          <a class="hover:text-primary transition-colors" href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT FOR DYNAMIC DOCUMENTS -->
+  <script>
+    (function() {
+      const CATEGORY_META = {
+        'notifications-tenders': {
+          title: 'Notifications, Tenders & RFPs',
+          badge: 'Public Procurement & Gazetted Notices',
+          desc: 'Official procurement notices, tenders, RFPs, and gazetted notifications issued by the Institute of Archaeology, Archaeological Survey of India.',
+          folder: 'IoA/assets/docs/notifications-tenders/'
+        },
+        'admissions': {
+          title: 'Admissions & Academic Prospectus',
+          badge: 'Academic Admissions 2027 Portal',
+          desc: 'Official admission prospectuses, curricula brochures, eligibility criteria, and examination guidelines for PGDA and conservation courses.',
+          folder: 'IoA/assets/docs/admissions/'
+        },
+        'research-excavation': {
+          title: 'Research & Excavation Reports',
+          badge: 'Scholarly Field Publications',
+          desc: 'Stratigraphic excavation reports, epigraphy survey monographs, scientific conservation studies, and field reports.',
+          folder: 'IoA/assets/docs/research-excavation/'
+        }
+      };
+
+      const params = new URLSearchParams(window.location.search);
+      let currentCategory = params.get('category') || 'notifications-tenders';
+      if (!CATEGORY_META[currentCategory]) currentCategory = 'notifications-tenders';
+
+      let currentDocs = [];
+      let searchQuery = '';
+
+      // Elements
+      const pageTitle = document.getElementById('page-title');
+      const pageDesc = document.getElementById('page-desc');
+      const sectionBadge = document.getElementById('section-badge');
+      const breadcrumbCategory = document.getElementById('breadcrumb-category');
+      const docsGrid = document.getElementById('docs-grid');
+      const emptyState = document.getElementById('empty-state');
+      const searchInput = document.querySelector('header input[type="search"]');
+
+      // Update page headers according to category
+      function updatePageHeader() {
+        const meta = CATEGORY_META[currentCategory];
+        if (pageTitle) pageTitle.textContent = meta.title;
+        if (pageDesc) pageDesc.textContent = meta.desc;
+        if (sectionBadge) sectionBadge.textContent = meta.badge;
+        if (breadcrumbCategory) breadcrumbCategory.textContent = meta.title;
+        document.title = `${meta.title} – Institute of Archaeology, ASI`;
+
+        // Highlight matching navbar tab item
+        document.querySelectorAll('.nav-tab-item').forEach(el => {
+          el.classList.remove('active');
+          const href = el.getAttribute('href') || '';
+          if (href.includes(`category=${currentCategory}`)) {
+            el.classList.add('active');
+          }
+        });
+      }
+
+      function renderDocs() {
+        const filtered = currentDocs.filter(d => {
+          return !searchQuery ||
+            d.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            d.filename.toLowerCase().includes(searchQuery.toLowerCase());
+        });
+
+        if (filtered.length === 0) {
+          docsGrid.innerHTML = '';
+          emptyState.classList.remove('hidden');
+          return;
+        }
+
+        emptyState.classList.add('hidden');
+
+        docsGrid.innerHTML = filtered.map(doc => `
+          <div class="bg-white/85 backdrop-blur-md border border-white/80 border-t-4 border-t-[#8c3b24] rounded-xl p-space-lg shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between space-y-space-md group">
+            <div class="space-y-space-xs">
+              <div class="flex items-center justify-between gap-space-xs">
+                <span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-primary/10 text-primary font-label-sm text-[11px] font-bold uppercase">
+                  <span class="material-symbols-outlined text-[14px]">picture_as_pdf</span> ${doc.ext} Document
+                </span>
+                <span class="text-secondary font-label-sm text-[12px] flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[14px]">event</span> ${doc.date}
+                </span>
+              </div>
+              <h3 class="font-title-lg text-title-lg text-on-surface font-bold leading-snug group-hover:text-primary transition-colors">
+                ${doc.title}
+              </h3>
+              <p class="font-mono text-[12px] text-outline truncate" title="${doc.filename}">
+                ${doc.filename}
+              </p>
+            </div>
+
+            <div class="pt-space-xs border-t border-surface-container flex items-center justify-between">
+              <span class="font-label-sm text-[12px] text-secondary flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">data_usage</span> ${doc.size}
+              </span>
+              <div class="flex items-center gap-2">
+                <a href="${doc.url}" target="_blank" class="px-space-xs py-1 rounded hover:bg-surface-container text-secondary hover:text-primary transition-colors text-[13px] font-semibold flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[16px]">visibility</span> View
+                </a>
+                <a href="${doc.url}" download="${doc.filename}" class="px-space-sm py-1 bg-primary text-on-primary hover:bg-primary-container rounded-lg text-[13px] font-semibold transition-colors flex items-center gap-1 shadow-sm">
+                  <span class="material-symbols-outlined text-[16px]">download</span> Download
+                </a>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Fetch document list for current category
+      async function loadDocs() {
+        try {
+          const res = await fetch(`/api/docs?category=${currentCategory}&t=${Date.now()}`);
+          if (res.ok) {
+            const data = await res.json();
+            const curr = JSON.stringify(currentDocs.map(d => ({ f: d.filename, m: d.mtime })));
+            const next = JSON.stringify(data.map(d => ({ f: d.filename, m: d.mtime })));
+            if (curr !== next) {
+              currentDocs = data;
+              renderDocs();
+            }
+          }
+        } catch (e) {
+          console.warn('API error:', e);
+        }
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value.trim();
+          renderDocs();
+        });
+      }
+
+      updatePageHeader();
+      loadDocs();
+
+      // Poll every 3 seconds for live changes
+      setInterval(() => {
+        loadDocs();
+      }, 3000);
+    })();
+  </script>
+</body>
+</html>
