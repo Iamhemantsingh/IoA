@@ -403,24 +403,38 @@ html.font-size-increase {
         });
       }
 
-      // Fetch images from /api/gallery
+      // Load gallery images: try dynamic API first (dev server), fall back to static manifest (Netlify)
+      let isLive = false; // true when dev-server API is reachable
+
       async function loadGalleryImages() {
         try {
           const res = await fetch('/api/gallery?t=' + Date.now());
           if (res.ok) {
+            isLive = true;
             const data = await res.json();
-            // Check if data changed
             const currentJson = JSON.stringify(currentImages.map(i => ({ f: i.filename, m: i.mtime })));
-            const newJson = JSON.stringify(data.map(i => ({ f: i.filename, m: i.mtime })));
-
+            const newJson     = JSON.stringify(data.map(i => ({ f: i.filename, m: i.mtime })));
             if (currentJson !== newJson) {
               currentImages = data;
               updateFilters(currentImages);
               renderGallery();
             }
+            return; // success
           }
-        } catch (e) {
-          console.warn('API fetch failed or static environment, falling back if needed:', e);
+        } catch (_) { /* dev server not running – expected on Netlify */ }
+
+        // Static fallback: load the pre-built JSON manifest
+        if (currentImages.length === 0) {
+          try {
+            const res = await fetch('/assets/data/gallery.json');
+            if (res.ok) {
+              currentImages = await res.json();
+              updateFilters(currentImages);
+              renderGallery();
+            }
+          } catch (e) {
+            console.warn('Static gallery manifest also unavailable:', e);
+          }
         }
       }
 
@@ -435,8 +449,8 @@ html.font-size-increase {
       // Initial load
       loadGalleryImages();
 
-      // Poll every 3 seconds so adding or deleting images in the folder updates the UI automatically
-      setInterval(loadGalleryImages, 3000);
+      // Poll only when running on dev server (API is live); skip on static hosts
+      setInterval(() => { if (isLive) loadGalleryImages(); }, 3000);
     })();
   </script>
 </body>

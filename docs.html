@@ -404,11 +404,14 @@ html.font-size-increase {
         `).join('');
       }
 
-      // Fetch document list for current category
+      // Load docs: try dynamic API first (dev server), fall back to static manifest (Netlify)
+      let isLive = false;
+
       async function loadDocs() {
         try {
           const res = await fetch(`/api/docs?category=${currentCategory}&t=${Date.now()}`);
           if (res.ok) {
+            isLive = true;
             const data = await res.json();
             const curr = JSON.stringify(currentDocs.map(d => ({ f: d.filename, m: d.mtime })));
             const next = JSON.stringify(data.map(d => ({ f: d.filename, m: d.mtime })));
@@ -416,9 +419,21 @@ html.font-size-increase {
               currentDocs = data;
               renderDocs();
             }
+            return;
           }
-        } catch (e) {
-          console.warn('API error:', e);
+        } catch (_) { /* dev server not running – expected on Netlify */ }
+
+        // Static fallback: load the pre-built JSON manifest for this category
+        if (currentDocs.length === 0) {
+          try {
+            const res = await fetch(`/assets/data/docs-${currentCategory}.json`);
+            if (res.ok) {
+              currentDocs = await res.json();
+              renderDocs();
+            }
+          } catch (e) {
+            console.warn('Static docs manifest also unavailable:', e);
+          }
         }
       }
 
@@ -432,10 +447,8 @@ html.font-size-increase {
       updatePageHeader();
       loadDocs();
 
-      // Poll every 3 seconds for live changes
-      setInterval(() => {
-        loadDocs();
-      }, 3000);
+      // Poll only when running on dev server (API is live)
+      setInterval(() => { if (isLive) loadDocs(); }, 3000);
     })();
   </script>
 </body>
