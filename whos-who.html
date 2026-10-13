@@ -52,6 +52,8 @@ html.font-size-increase {
 </style>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="assets/js/accessibility.js" defer></script>
+  <script src="assets/js/rti-modal.js" defer></script>
+  <script src="assets/js/site-search.js" defer></script>
   <script id="tailwind-config">
     tailwind.config={
       darkMode:"class",
@@ -200,33 +202,15 @@ html.font-size-increase {
       </div>
     </div>
 
-    <!-- Page Title & Key Stats Header -->
+    <!-- Page Title Header -->
     <section class="w-full py-space-lg">
       <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-space-lg">
           <div>
-            <div class="inline-flex items-center gap-space-xxs text-primary font-label-sm uppercase tracking-widest font-bold mb-1">
-              <span class="material-symbols-outlined text-[14px]">play_arrow</span> Apex Administrative &amp; Scholarly Custodians
-            </div>
             <h1 class="font-headline-lg text-headline-lg text-primary">Who's Who</h1>
             <p class="font-body-sm text-body-sm text-secondary mt-1 max-w-2xl leading-relaxed">
               Directory of Administrative, Academic and Conservation officers of Institute of Archaeology, Pt. Deendayal Upadhyaya Campus, Greater Noida.
             </p>
-          </div>
-          <!-- 3 Stats Boxes -->
-          <div class="flex items-center bg-[#f5ede3] border border-[#dbc1ba]/60 rounded-xl p-space-sm divide-x divide-[#dbc1ba]/60 shrink-0">
-            <div class="px-space-md text-center">
-              <span class="block font-headline-md text-headline-md text-primary font-bold leading-tight">2</span>
-              <span class="font-label-sm text-[10px] text-secondary uppercase tracking-wider">Faculty &amp; Chairs</span>
-            </div>
-            <div class="px-space-md text-center">
-              <span class="block font-headline-md text-headline-md text-primary font-bold leading-tight">4</span>
-              <span class="font-label-sm text-[10px] text-secondary uppercase tracking-wider">Research Labs</span>
-            </div>
-            <div class="px-space-md text-center">
-              <span class="block font-headline-md text-headline-md text-primary font-bold leading-tight">06</span>
-              <span class="font-label-sm text-[10px] text-secondary uppercase tracking-wider">ASI Divisions</span>
-            </div>
           </div>
         </div>
       </div>
@@ -236,249 +220,242 @@ html.font-size-increase {
     <section class="w-full pb-space-3xl">
       <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop space-y-space-md">
 
-        <!-- CARD 1: Sh. Arun Singhal, IAS (Retd.) - Administrator (Featured Card) -->
+        <!-- 1. Sh. Arun Singhal - Administrator -->
         <article class="bg-white/80 backdrop-blur-md rounded-xl border border-white/80 border-t-4 border-t-[#8c3b24] p-space-lg shadow-sm hover:shadow-xl transition-all duration-300">
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-space-lg">
             <!-- Left: Avatar + Details -->
             <div class="flex items-start sm:items-center gap-space-lg">
-              <!-- Avatar placeholder with badge -->
               <div class="flex flex-col items-center shrink-0">
-                <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-[#ebe3d9] border-2 border-[#dbc1ba] flex items-center justify-center overflow-hidden shadow-inner">
-                  <span class="material-symbols-outlined text-[64px] sm:text-[76px] text-[#a89b94]">person</span>
+                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-[#ebe3d9] border-2 border-[#dbc1ba] flex items-center justify-center overflow-hidden shadow-inner">
+                  <span class="material-symbols-outlined text-[54px] sm:text-[64px] text-[#a89b94]">person</span>
                 </div>
-                <span class="mt-2 px-space-sm py-0.5 rounded-full bg-[#ffdad6] text-[#6e2510] font-label-sm text-[10px] uppercase font-bold tracking-wider">
-                  Administrator
-                </span>
               </div>
-              <!-- Name & Title -->
               <div class="space-y-space-xxs">
-                <div class="flex items-center gap-space-xxs text-secondary text-body-sm">
-                  <span class="material-symbols-outlined text-[16px] text-primary">account_balance</span>
-                  <span class="font-label-sm uppercase tracking-wider font-semibold">Ministry of Culture</span>
+                <div class="flex items-center gap-space-xs">
+                  <span class="px-space-xs py-0.5 rounded-full bg-[#ffdad6] text-[#6e2510] font-label-sm text-[10px] uppercase font-bold tracking-wider">
+                    Administration
+                  </span>
                 </div>
                 <h2 class="font-headline-md text-headline-md text-on-surface font-bold">
-                  Sh. Arun Singhal, IAS (Retd.)
+                  Sh. Arun Singhal
                 </h2>
                 <p class="font-body-md text-body-md text-secondary font-medium">Administrator</p>
               </div>
             </div>
 
-            <!-- Right: Contact Pill / Info Block -->
-            <div class="bg-[#f7f3ee] border border-[#dbc1ba]/60 rounded-xl p-space-md space-y-space-xs text-body-sm font-label-md text-on-surface-variant shrink-0 w-full md:w-80">
-              <div class="flex items-start gap-space-xs">
-                <span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">apartment</span>
-                <span class="text-body-sm">PtDDU Campus, Plot 2, 2nd Floor, Room - 201</span>
-              </div>
+            <!-- Right: Email Pill -->
+            <div class="bg-[#f7f3ee] border border-[#dbc1ba]/60 rounded-xl p-space-md text-body-sm font-label-md text-on-surface-variant shrink-0 w-full md:w-auto">
               <div class="flex items-center gap-space-xs">
                 <span class="material-symbols-outlined text-[18px] text-primary shrink-0">mail</span>
-                <a href="mailto:dir-asi@gov.in" class="text-primary hover:underline font-mono text-[13px]">dir-asi@gov.in</a>
-              </div>
-              <div class="flex items-center gap-space-xs">
-                <span class="material-symbols-outlined text-[18px] text-primary shrink-0">call</span>
-                <span class="font-mono text-[13px]">+91-120-2333100 / Ext. 101</span>
+                <a href="mailto:dg.pduia@gov.in" class="text-primary hover:underline font-mono text-[13px]">dg.pduia@gov.in</a>
               </div>
             </div>
           </div>
         </article>
 
-        <!-- CARD 2: Sh. Rajesh Gupta - Consultant -->
+        <!-- 2. Sh. Rajesh Gupta - Consultant (Administration) -->
         <article class="bg-white/80 backdrop-blur-md rounded-xl border border-white/80 border-t-4 border-t-[#8c3b24] p-space-md shadow-sm hover:shadow-xl transition-all duration-300">
-          <div class="flex flex-col sm:flex-row sm:items-center gap-space-md">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-[#ebe3d9] border border-[#dbc1ba] flex items-center justify-center shrink-0 shadow-inner">
-              <span class="material-symbols-outlined text-[48px] sm:text-[56px] text-[#a89b94]">person</span>
-            </div>
-            <div class="flex-1 space-y-space-xxs">
-              <div class="flex items-center gap-space-xs">
-                <span class="px-space-xs py-0.5 rounded bg-[#f1ede8] text-secondary font-label-sm text-[10px] uppercase font-bold tracking-wider">
-                  Administration
-                </span>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+            <div class="flex items-center gap-space-md">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-[#ebe3d9] border border-[#dbc1ba] flex items-center justify-center shrink-0 shadow-inner">
+                <span class="material-symbols-outlined text-[48px] sm:text-[56px] text-[#a89b94]">person</span>
               </div>
-              <h3 class="font-title-lg text-title-lg text-on-surface font-bold">Sh. Rajesh Gupta</h3>
-              <p class="font-body-sm text-body-sm text-secondary">Consultant</p>
-              <div class="pt-1 flex flex-wrap items-center gap-x-space-lg gap-y-1 text-body-sm text-secondary">
-                <span class="flex items-center gap-space-xxs">
-                  <span class="material-symbols-outlined text-[16px] text-primary">location_on</span> PtDDU Campus, Plot-2, 2nd Floor, Room - 202
-                </span>
-                <span class="flex items-center gap-space-xxs font-mono text-[12px]">
-                  <span class="material-symbols-outlined text-[16px] text-primary">mail</span> consultant-ia@nic.in
-                </span>
-                <span class="flex items-center gap-space-xxs font-mono text-[12px]">
-                  <span class="material-symbols-outlined text-[16px] text-primary">call</span> Ext. 201 • PtDDU Campus
-                </span>
+              <div class="space-y-space-xxs">
+                <div class="flex items-center gap-space-xs">
+                  <span class="px-space-xs py-0.5 rounded bg-[#f1ede8] text-secondary font-label-sm text-[10px] uppercase font-bold tracking-wider">
+                    Administration
+                  </span>
+                </div>
+                <h3 class="font-title-lg text-title-lg text-on-surface font-bold">Sh. Rajesh Gupta</h3>
+                <p class="font-body-sm text-body-sm text-secondary">Consultant</p>
+              </div>
+            </div>
+            <div class="bg-[#f7f3ee] border border-[#dbc1ba]/60 rounded-xl px-space-md py-space-sm text-body-sm font-label-md shrink-0">
+              <div class="flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-[18px] text-primary shrink-0">mail</span>
+                <a href="mailto:rajeshgupta.RTH@gov.in" class="text-primary hover:underline font-mono text-[12px] sm:text-[13px]">rajeshgupta.RTH@gov.in</a>
               </div>
             </div>
           </div>
         </article>
 
-        <!-- CARD 3: Smt. Sonal Yadav - Under Secretary -->
+        <!-- 3. Ms. Sonal Yadav - Under Secretary (Administration) -->
         <article class="bg-white/80 backdrop-blur-md rounded-xl border border-white/80 border-t-4 border-t-[#8c3b24] p-space-md shadow-sm hover:shadow-xl transition-all duration-300">
-          <div class="flex flex-col sm:flex-row sm:items-center gap-space-md">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-[#ebe3d9] border border-[#dbc1ba] flex items-center justify-center shrink-0 shadow-inner">
-              <span class="material-symbols-outlined text-[48px] sm:text-[56px] text-[#a89b94]">person</span>
-            </div>
-            <div class="flex-1 space-y-space-xxs">
-              <div class="flex items-center gap-space-xs">
-                <span class="px-space-xs py-0.5 rounded bg-[#f1ede8] text-secondary font-label-sm text-[10px] uppercase font-bold tracking-wider">
-                  Administration
-                </span>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+            <div class="flex items-center gap-space-md">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-[#ebe3d9] border border-[#dbc1ba] flex items-center justify-center shrink-0 shadow-inner">
+                <span class="material-symbols-outlined text-[48px] sm:text-[56px] text-[#a89b94]">person</span>
               </div>
-              <h3 class="font-title-lg text-title-lg text-on-surface font-bold">Smt. Sonal Yadav</h3>
-              <p class="font-body-sm text-body-sm text-secondary">Under Secretary to the Govt. of India</p>
-              <div class="pt-1 flex flex-wrap items-center gap-x-space-lg gap-y-1 text-body-sm text-secondary">
-                <span class="flex items-center gap-space-xxs">
-                  <span class="material-symbols-outlined text-[16px] text-primary">location_on</span> PtDDU Campus, Plot-2, 2nd Floor, Room - 203
-                </span>
-                <span class="flex items-center gap-space-xxs font-mono text-[12px]">
-                  <span class="material-symbols-outlined text-[16px] text-primary">mail</span> us-asi@gov.in
-                </span>
-                <span class="flex items-center gap-space-xxs font-mono text-[12px]">
-                  <span class="material-symbols-outlined text-[16px] text-primary">call</span> Ext. 203 • Direct: +91-120-2333102
-                </span>
+              <div class="space-y-space-xxs">
+                <div class="flex items-center gap-space-xs">
+                  <span class="px-space-xs py-0.5 rounded bg-[#f1ede8] text-secondary font-label-sm text-[10px] uppercase font-bold tracking-wider">
+                    Administration
+                  </span>
+                </div>
+                <h3 class="font-title-lg text-title-lg text-on-surface font-bold">Ms. Sonal Yadav</h3>
+                <p class="font-body-sm text-body-sm text-secondary">Under Secretary</p>
+              </div>
+            </div>
+            <div class="bg-[#f7f3ee] border border-[#dbc1ba]/60 rounded-xl px-space-md py-space-sm text-body-sm font-label-md shrink-0">
+              <div class="flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-[18px] text-primary shrink-0">mail</span>
+                <a href="mailto:sonal.y13@nic.in" class="text-primary hover:underline font-mono text-[12px] sm:text-[13px]">sonal.y13@nic.in</a>
               </div>
             </div>
           </div>
         </article>
 
-        <!-- CARD 4: Dr. Anil Kumar A. - Superintending Archaeologist -->
+        <!-- 4. Sh. A. Anil Kumar - Superintending Archaeologist (Academic) -->
         <article class="bg-white/80 backdrop-blur-md rounded-xl border border-white/80 border-t-4 border-t-[#8c3b24] p-space-md shadow-sm hover:shadow-xl transition-all duration-300">
-          <div class="flex flex-col sm:flex-row sm:items-center gap-space-md">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-[#ebe3d9] border border-[#dbc1ba] flex items-center justify-center shrink-0 shadow-inner">
-              <span class="material-symbols-outlined text-[48px] sm:text-[56px] text-[#a89b94]">person</span>
-            </div>
-            <div class="flex-1 space-y-space-xxs">
-              <div class="flex items-center gap-space-xs">
-                <span class="px-space-xs py-0.5 rounded bg-[#ffddba] text-[#593400] font-label-sm text-[10px] uppercase font-bold tracking-wider">
-                  Academic
-                </span>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+            <div class="flex items-center gap-space-md">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-[#ebe3d9] border border-[#dbc1ba] flex items-center justify-center shrink-0 shadow-inner">
+                <span class="material-symbols-outlined text-[48px] sm:text-[56px] text-[#a89b94]">person</span>
               </div>
-              <h3 class="font-title-lg text-title-lg text-on-surface font-bold">Dr. Anil Kumar A.</h3>
-              <p class="font-body-sm text-body-sm text-secondary">Superintending Archaeologist</p>
-              <div class="pt-1 flex flex-wrap items-center gap-x-space-lg gap-y-1 text-body-sm text-secondary">
-                <span class="flex items-center gap-space-xxs">
-                  <span class="material-symbols-outlined text-[16px] text-primary">location_on</span> PtDDU Campus, Plot-2, First Floor, Room - 102
-                </span>
-                <span class="flex items-center gap-space-xxs font-mono text-[12px]">
-                  <span class="material-symbols-outlined text-[16px] text-primary">mail</span> sa-ia@nic.in
-                </span>
-                <span class="flex items-center gap-space-xxs font-mono text-[12px]">
-                  <span class="material-symbols-outlined text-[16px] text-primary">call</span> Ext. 104 • Field Operations Desk
-                </span>
+              <div class="space-y-space-xxs">
+                <div class="flex items-center gap-space-xs">
+                  <span class="px-space-xs py-0.5 rounded bg-[#ffddba] text-[#593400] font-label-sm text-[10px] uppercase font-bold tracking-wider">
+                    Academic
+                  </span>
+                </div>
+                <h3 class="font-title-lg text-title-lg text-on-surface font-bold">Sh. A. Anil Kumar</h3>
+                <p class="font-body-sm text-body-sm text-secondary">Superintending Archaeologist</p>
+              </div>
+            </div>
+            <div class="bg-[#f7f3ee] border border-[#dbc1ba]/60 rounded-xl px-space-md py-space-sm text-body-sm font-label-md shrink-0">
+              <div class="flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-[18px] text-primary shrink-0">mail</span>
+                <a href="mailto:a.anilkumar.asi@gov.in" class="text-primary hover:underline font-mono text-[12px] sm:text-[13px]">a.anilkumar.asi@gov.in</a>
               </div>
             </div>
           </div>
         </article>
 
-        <!-- CARD 5: Dr. Ashis Ranjan Sahoo - Assistant Archaeological Chemist -->
+        <!-- 5. Dr. Ashis Ranjan Sahoo - Assistant Superintending Archaeologist (Academic) -->
         <article class="bg-white/80 backdrop-blur-md rounded-xl border border-white/80 border-t-4 border-t-[#8c3b24] p-space-md shadow-sm hover:shadow-xl transition-all duration-300">
-          <div class="flex flex-col sm:flex-row sm:items-center gap-space-md">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-[#ebe3d9] border border-[#dbc1ba] flex items-center justify-center shrink-0 shadow-inner">
-              <span class="material-symbols-outlined text-[48px] sm:text-[56px] text-[#a89b94]">person</span>
-            </div>
-            <div class="flex-1 space-y-space-xxs">
-              <div class="flex items-center gap-space-xs">
-                <span class="px-space-xs py-0.5 rounded bg-[#ffddba] text-[#593400] font-label-sm text-[10px] uppercase font-bold tracking-wider">
-                  Academic
-                </span>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+            <div class="flex items-center gap-space-md">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-[#ebe3d9] border border-[#dbc1ba] flex items-center justify-center shrink-0 shadow-inner">
+                <span class="material-symbols-outlined text-[48px] sm:text-[56px] text-[#a89b94]">person</span>
               </div>
-              <h3 class="font-title-lg text-title-lg text-on-surface font-bold">Dr. Ashis Ranjan Sahoo</h3>
-              <p class="font-body-sm text-body-sm text-secondary">Assistant Archaeological Chemist</p>
-              <div class="pt-1 flex flex-wrap items-center gap-x-space-lg gap-y-1 text-body-sm text-secondary">
-                <span class="flex items-center gap-space-xxs">
-                  <span class="material-symbols-outlined text-[16px] text-primary">location_on</span> PtDDU Campus, Plot-2, First Floor, Room - 103
-                </span>
-                <span class="flex items-center gap-space-xxs font-mono text-[12px]">
-                  <span class="material-symbols-outlined text-[16px] text-primary">mail</span> aac-ia@nic.in
-                </span>
-                <span class="flex items-center gap-space-xxs font-mono text-[12px]">
-                  <span class="material-symbols-outlined text-[16px] text-primary">call</span> Ext. 107 • Analysis Lab Branch
-                </span>
+              <div class="space-y-space-xxs">
+                <div class="flex items-center gap-space-xs">
+                  <span class="px-space-xs py-0.5 rounded bg-[#ffddba] text-[#593400] font-label-sm text-[10px] uppercase font-bold tracking-wider">
+                    Academic
+                  </span>
+                </div>
+                <h3 class="font-title-lg text-title-lg text-on-surface font-bold">Dr. Ashis Ranjan Sahoo</h3>
+                <p class="font-body-sm text-body-sm text-secondary">Assistant Superintending Archaeologist</p>
+              </div>
+            </div>
+            <div class="bg-[#f7f3ee] border border-[#dbc1ba]/60 rounded-xl px-space-md py-space-sm text-body-sm font-label-md shrink-0">
+              <div class="flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-[18px] text-primary shrink-0">mail</span>
+                <a href="mailto:ashis.asi@gov.in" class="text-primary hover:underline font-mono text-[12px] sm:text-[13px]">ashis.asi@gov.in</a>
               </div>
             </div>
           </div>
         </article>
 
-        <!-- CARD 6: Sh. Nripondra Singh - Assistant Archaeologist -->
+        <!-- 6. Sh. Santashray - Assistant Archaeologist (Academic) -->
         <article class="bg-white/80 backdrop-blur-md rounded-xl border border-white/80 border-t-4 border-t-[#8c3b24] p-space-md shadow-sm hover:shadow-xl transition-all duration-300">
-          <div class="flex flex-col sm:flex-row sm:items-center gap-space-md">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-[#ebe3d9] border border-[#dbc1ba] flex items-center justify-center shrink-0 shadow-inner">
-              <span class="material-symbols-outlined text-[48px] sm:text-[56px] text-[#a89b94]">person</span>
-            </div>
-            <div class="flex-1 space-y-space-xxs">
-              <div class="flex items-center gap-space-xs">
-                <span class="px-space-xs py-0.5 rounded bg-[#ffddba] text-[#593400] font-label-sm text-[10px] uppercase font-bold tracking-wider">
-                  Academic
-                </span>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+            <div class="flex items-center gap-space-md">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-[#ebe3d9] border border-[#dbc1ba] flex items-center justify-center shrink-0 shadow-inner">
+                <span class="material-symbols-outlined text-[48px] sm:text-[56px] text-[#a89b94]">person</span>
               </div>
-              <h3 class="font-title-lg text-title-lg text-on-surface font-bold">Sh. Nripondra Singh</h3>
-              <p class="font-body-sm text-body-sm text-secondary">Assistant Archaeologist</p>
-              <div class="pt-1 flex flex-wrap items-center gap-x-space-lg gap-y-1 text-body-sm text-secondary">
-                <span class="flex items-center gap-space-xxs">
-                  <span class="material-symbols-outlined text-[16px] text-primary">location_on</span> PtDDU Campus, Plot-2, 2nd Floor, Room - 205
-                </span>
-                <span class="flex items-center gap-space-xxs font-mono text-[12px]">
-                  <span class="material-symbols-outlined text-[16px] text-primary">mail</span> aa1-ia@nic.in
-                </span>
-                <span class="flex items-center gap-space-xxs font-mono text-[12px]">
-                  <span class="material-symbols-outlined text-[16px] text-primary">call</span> Ext. 105 • Lab Desk
-                </span>
+              <div class="space-y-space-xxs">
+                <div class="flex items-center gap-space-xs">
+                  <span class="px-space-xs py-0.5 rounded bg-[#ffddba] text-[#593400] font-label-sm text-[10px] uppercase font-bold tracking-wider">
+                    Academic
+                  </span>
+                </div>
+                <h3 class="font-title-lg text-title-lg text-on-surface font-bold">Sh. Santashray</h3>
+                <p class="font-body-sm text-body-sm text-secondary">Assistant Archaeologist</p>
+              </div>
+            </div>
+            <div class="bg-[#f7f3ee] border border-[#dbc1ba]/60 rounded-xl px-space-md py-space-sm text-body-sm font-label-md shrink-0">
+              <div class="flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-[18px] text-primary shrink-0">mail</span>
+                <a href="mailto:santashray.asi@gov.in" class="text-primary hover:underline font-mono text-[12px] sm:text-[13px]">santashray.asi@gov.in</a>
               </div>
             </div>
           </div>
         </article>
 
-        <!-- CARD 7: Sh. Santashray Yadav - Assistant Archaeologist -->
+        <!-- 7. Sh. Nirpendra Singh - Assistant Archaeologist (Academic) -->
         <article class="bg-white/80 backdrop-blur-md rounded-xl border border-white/80 border-t-4 border-t-[#8c3b24] p-space-md shadow-sm hover:shadow-xl transition-all duration-300">
-          <div class="flex flex-col sm:flex-row sm:items-center gap-space-md">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-[#ebe3d9] border border-[#dbc1ba] flex items-center justify-center shrink-0 shadow-inner">
-              <span class="material-symbols-outlined text-[48px] sm:text-[56px] text-[#a89b94]">person</span>
-            </div>
-            <div class="flex-1 space-y-space-xxs">
-              <div class="flex items-center gap-space-xs">
-                <span class="px-space-xs py-0.5 rounded bg-[#ffddba] text-[#593400] font-label-sm text-[10px] uppercase font-bold tracking-wider">
-                  Academic
-                </span>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+            <div class="flex items-center gap-space-md">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-[#ebe3d9] border border-[#dbc1ba] flex items-center justify-center shrink-0 shadow-inner">
+                <span class="material-symbols-outlined text-[48px] sm:text-[56px] text-[#a89b94]">person</span>
               </div>
-              <h3 class="font-title-lg text-title-lg text-on-surface font-bold">Sh. Santashray Yadav</h3>
-              <p class="font-body-sm text-body-sm text-secondary">Assistant Archaeologist</p>
-              <div class="pt-1 flex flex-wrap items-center gap-x-space-lg gap-y-1 text-body-sm text-secondary">
-                <span class="flex items-center gap-space-xxs">
-                  <span class="material-symbols-outlined text-[16px] text-primary">location_on</span> PtDDU Campus, Plot-2, 2nd Floor, Room - 206
-                </span>
-                <span class="flex items-center gap-space-xxs font-mono text-[12px]">
-                  <span class="material-symbols-outlined text-[16px] text-primary">mail</span> aa2-ia@nic.in
-                </span>
-                <span class="flex items-center gap-space-xxs font-mono text-[12px]">
-                  <span class="material-symbols-outlined text-[16px] text-primary">call</span> Ext. 106
-                </span>
+              <div class="space-y-space-xxs">
+                <div class="flex items-center gap-space-xs">
+                  <span class="px-space-xs py-0.5 rounded bg-[#ffddba] text-[#593400] font-label-sm text-[10px] uppercase font-bold tracking-wider">
+                    Academic
+                  </span>
+                </div>
+                <h3 class="font-title-lg text-title-lg text-on-surface font-bold">Sh. Nirpendra Singh</h3>
+                <p class="font-body-sm text-body-sm text-secondary">Assistant Archaeologist</p>
+              </div>
+            </div>
+            <div class="bg-[#f7f3ee] border border-[#dbc1ba]/60 rounded-xl px-space-md py-space-sm text-body-sm font-label-md shrink-0">
+              <div class="flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-[18px] text-primary shrink-0">mail</span>
+                <a href="mailto:nirpendrasingh01.asi@gov.in" class="text-primary hover:underline font-mono text-[12px] sm:text-[13px]">nirpendrasingh01.asi@gov.in</a>
               </div>
             </div>
           </div>
         </article>
 
-        <!-- CARD 8: Sh. Lavkush Soni - Senior Conservation Assistant -->
+        <!-- 8. Ms. Sweety - LIA (Library) -->
         <article class="bg-white/80 backdrop-blur-md rounded-xl border border-white/80 border-t-4 border-t-[#8c3b24] p-space-md shadow-sm hover:shadow-xl transition-all duration-300">
-          <div class="flex flex-col sm:flex-row sm:items-center gap-space-md">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-[#ebe3d9] border border-[#dbc1ba] flex items-center justify-center shrink-0 shadow-inner">
-              <span class="material-symbols-outlined text-[48px] sm:text-[56px] text-[#a89b94]">person</span>
-            </div>
-            <div class="flex-1 space-y-space-xxs">
-              <div class="flex items-center gap-space-xs">
-                <span class="px-space-xs py-0.5 rounded bg-[#cfc4bf] text-[#201a18] font-label-sm text-[10px] uppercase font-bold tracking-wider">
-                  Conservation
-                </span>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+            <div class="flex items-center gap-space-md">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-[#ebe3d9] border border-[#dbc1ba] flex items-center justify-center shrink-0 shadow-inner">
+                <span class="material-symbols-outlined text-[48px] sm:text-[56px] text-[#a89b94]">person</span>
               </div>
-              <h3 class="font-title-lg text-title-lg text-on-surface font-bold">Sh. Lavkush Soni</h3>
-              <p class="font-body-sm text-body-sm text-secondary">Senior Conservation Assistant</p>
-              <div class="pt-1 flex flex-wrap items-center gap-x-space-lg gap-y-1 text-body-sm text-secondary">
-                <span class="flex items-center gap-space-xxs">
-                  <span class="material-symbols-outlined text-[16px] text-primary">location_on</span> PtDDU Campus, Plot-2, 2nd Floor, Room - 209
-                </span>
-                <span class="flex items-center gap-space-xxs font-mono text-[12px]">
-                  <span class="material-symbols-outlined text-[16px] text-primary">mail</span> sca-ia@nic.in
-                </span>
-                <span class="flex items-center gap-space-xxs font-mono text-[12px]">
-                  <span class="material-symbols-outlined text-[16px] text-primary">call</span> Ext. 204
-                </span>
+              <div class="space-y-space-xxs">
+                <div class="flex items-center gap-space-xs">
+                  <span class="px-space-xs py-0.5 rounded bg-[#e6e2dd] text-[#55433e] font-label-sm text-[10px] uppercase font-bold tracking-wider">
+                    Library
+                  </span>
+                </div>
+                <h3 class="font-title-lg text-title-lg text-on-surface font-bold">Ms. Sweety</h3>
+                <p class="font-body-sm text-body-sm text-secondary">LIA</p>
+              </div>
+            </div>
+            <div class="bg-[#f7f3ee] border border-[#dbc1ba]/60 rounded-xl px-space-md py-space-sm text-body-sm font-label-md shrink-0">
+              <div class="flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-[18px] text-primary shrink-0">mail</span>
+                <a href="mailto:sweety65.asi@gov.in" class="text-primary hover:underline font-mono text-[12px] sm:text-[13px]">sweety65.asi@gov.in</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 9. Sh. Lav Kush Soni - Sr. cons. Asstt. (Conservation) -->
+        <article class="bg-white/80 backdrop-blur-md rounded-xl border border-white/80 border-t-4 border-t-[#8c3b24] p-space-md shadow-sm hover:shadow-xl transition-all duration-300">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+            <div class="flex items-center gap-space-md">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-[#ebe3d9] border border-[#dbc1ba] flex items-center justify-center shrink-0 shadow-inner">
+                <span class="material-symbols-outlined text-[48px] sm:text-[56px] text-[#a89b94]">person</span>
+              </div>
+              <div class="space-y-space-xxs">
+                <div class="flex items-center gap-space-xs">
+                  <span class="px-space-xs py-0.5 rounded bg-[#cfc4bf] text-[#201a18] font-label-sm text-[10px] uppercase font-bold tracking-wider">
+                    Conservation
+                  </span>
+                </div>
+                <h3 class="font-title-lg text-title-lg text-on-surface font-bold">Sh. Lav Kush Soni</h3>
+                <p class="font-body-sm text-body-sm text-secondary">Sr. cons. Asstt.</p>
+              </div>
+            </div>
+            <div class="bg-[#f7f3ee] border border-[#dbc1ba]/60 rounded-xl px-space-md py-space-sm text-body-sm font-label-md shrink-0">
+              <div class="flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-[18px] text-primary shrink-0">mail</span>
+                <a href="mailto:lovkhus.circle@gov.in" class="text-primary hover:underline font-mono text-[12px] sm:text-[13px]">lovkhus.circle@gov.in</a>
               </div>
             </div>
           </div>
@@ -500,10 +477,7 @@ html.font-size-increase {
             </p>
           </div>
           <div class="flex flex-wrap sm:flex-nowrap items-center gap-space-sm shrink-0">
-            <a href="assets/docs/admissions/IoA_Prospectus_2027.pdf" download class="px-space-md py-space-sm bg-surface-container-low border border-[#dbc1ba] hover:bg-surface-container text-on-surface font-label-md text-label-md rounded-lg shadow-sm transition-colors flex items-center gap-space-xs">
-              <span class="material-symbols-outlined text-[18px]">download</span> Download Official Directory PDF
-            </a>
-            <a href="#" class="px-space-md py-space-sm bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md rounded-lg shadow-sm transition-colors flex items-center gap-space-xs">
+            <a href="#rti-modal" data-action="rti-modal" class="px-space-md py-space-sm bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md rounded-lg shadow-sm transition-colors flex items-center gap-space-xs cursor-pointer">
               <span class="material-symbols-outlined text-[18px]">contact_phone</span> RTI Cell Nodal Officer
             </a>
           </div>
@@ -549,7 +523,7 @@ html.font-size-increase {
         <div class="space-y-space-md">
           <h5 class="font-title-md text-title-md text-on-surface font-bold">Public Governance</h5>
           <ul class="space-y-space-xs text-body-sm font-body-sm text-on-surface-variant">
-            <li><a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="#"><span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>Right to Information (RTI Cell)</a></li>
+            <li><a class="hover:text-primary transition-colors flex items-center gap-space-xxs cursor-pointer" href="#rti-modal" data-action="rti-modal"><span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>Right to Information (RTI Cell)</a></li>
             <li><a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="#"><span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>Citizens' Charter &amp; Redressal</a></li>
             <li><a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="docs.html?category=notifications-tenders"><span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>Tenders, RFPs &amp; Public Auctions</a></li>
             <li><a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="#"><span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>Central Archaeological Library Access</a></li>

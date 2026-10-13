@@ -55,6 +55,8 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="../assets/js/accessibility.js" defer></script>
+  <script src="../assets/js/rti-modal.js" defer></script>
+  <script src="../assets/js/site-search.js" defer></script>
   <script id="tailwind-config">
     tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-primary":"#ffb5a0","outline":"#88726c","surface":"#fdf9f4","secondary":"#655d59","on-primary-fixed":"#3b0900","primary-fixed":"#ffdbd1","on-primary":"#ffffff","secondary-container":"#ece0db","tertiary":"#593400","surface-dim":"#ddd9d5","on-surface":"#1c1c19","secondary-fixed-dim":"#cfc4bf","primary-container":"#8c3b24","on-secondary-fixed-variant":"#4d4542","error-container":"#ffdad6","on-error":"#ffffff","on-error-container":"#93000a","tertiary-fixed-dim":"#fbba6f","inverse-surface":"#31302d","on-secondary-container":"#6b635f","surface-tint":"#99452d","on-primary-fixed-variant":"#7b2e18","background":"#fdf9f4","surface-bright":"#fdf9f4","tertiary-container":"#784904","on-secondary":"#ffffff","surface-container-high":"#ebe8e3","surface-container-highest":"#e6e2dd","on-tertiary-container":"#fdbb70","primary":"#6e2510","tertiary-fixed":"#ffddba","secondary-fixed":"#ece0db","inverse-on-surface":"#f4f0eb","on-tertiary-fixed-variant":"#673d00","on-tertiary":"#ffffff","surface-container-low":"#f7f3ee","primary-fixed-dim":"#ffb5a0","surface-container":"#f1ede8","on-primary-container":"#ffb7a4","on-background":"#1c1c19","surface-container-lowest":"#ffffff","outline-variant":"#dbc1ba","on-surface-variant":"#55433e","on-secondary-fixed":"#201a18","error":"#ba1a1a","surface-variant":"#e6e2dd","on-tertiary-fixed":"#2b1700"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter-desktop":"2rem","space-3xl":"4rem","space-4xl":"6rem","space-xs":"0.5rem","space-2xl":"3rem","container-max":"1280px","space-xxs":"0.25rem","margin-mobile":"1rem","space-lg":"1.5rem","margin-tablet":"2rem","gutter-mobile":"1rem","gutter-tablet":"1.5rem","space-xl":"2rem","space-sm":"0.75rem","space-md":"1rem","margin-desktop":"3rem"},"fontFamily":{"title-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"display-hero-mobile":["Noto Serif"],"headline-sm":["Noto Serif"],"display-hero":["Noto Serif"],"headline-md":["Noto Serif"],"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-lg":["Noto Serif"],"title-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Noto Serif"]},"fontSize":{"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"600"}],"display-hero-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"display-hero":["48px",{"lineHeight":"60px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"headline-lg":["36px",{"lineHeight":"46px","letterSpacing":"-0.01em","fontWeight":"600"}],"title-lg":["18px",{"lineHeight":"26px","fontWeight":"700"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","fontWeight":"600"}]}}}}
   </script>
@@ -86,9 +88,11 @@
             <a class="px-space-xs py-space-xxs text-inverse-on-surface hover:text-on-primary-container transition-colors" href="../index.html">English</a>
           </div>
           <span class="hidden sm:inline-block opacity-40">|</span>
-          <a aria-label="स्क्रीन रीडर" class="hidden lg:inline-flex items-center gap-space-xxs text-inverse-on-surface font-label-sm text-label-sm hover:underline" href="#">
-            <span class="material-symbols-outlined text-[14px]">accessibility_new</span>Screen Reader
-          </a>
+          <!-- Search bar shifted to top right -->
+          <div class="relative flex items-center">
+            <span class="material-symbols-outlined absolute left-2.5 text-[#cfc4bf] text-[16px] pointer-events-none">search</span>
+            <input class="bg-white/10 border border-white/20 pl-8 pr-3 py-1 text-xs text-inverse-on-surface placeholder:text-inverse-on-surface/60 rounded-md focus:outline-none focus:bg-white/20 focus:border-white/40 w-40 sm:w-56 transition-all" placeholder="खोजें / Search archives, syllabi..." type="search">
+          </div>
         </div>
       </div>
     </div>
@@ -307,8 +311,8 @@
               <div>
                 <div class="relative h-48 bg-surface-container">
                   <img class="w-full h-full object-cover"
-                       alt="पुरातत्व संस्थान कक्षा एवं सम्मेलन कक्ष"
-                       src="../assets/images/classroom.svg">
+                       alt="पुरातत्व संस्थान सभागार एवं शैक्षणिक हॉल"
+                       src="../assets/images/auditorium.svg">
                   <span class="absolute top-3 left-3 bg-primary text-on-primary font-label-sm text-label-sm px-space-xs py-space-xxs rounded uppercase shadow-sm">पुरातत्व</span>
                 </div>
                 <div class="p-space-lg space-y-space-sm">
@@ -859,7 +863,7 @@
           <h5 class="font-title-md text-title-md text-on-surface font-bold" style="font-family:'Noto Sans Devanagari','Plus Jakarta Sans',sans-serif;">सार्वजनिक शासन</h5>
           <ul class="space-y-space-xs text-body-sm font-body-sm text-on-surface-variant">
             <li>
-              <a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="#">
+              <a class="hover:text-primary transition-colors flex items-center gap-space-xxs cursor-pointer" href="#rti-modal" data-action="rti-modal">
                 <span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>
                 <span style="font-family:'Noto Sans Devanagari','Plus Jakarta Sans',sans-serif;">सूचना का अधिकार (RTI प्रकोष्ठ)</span>
               </a>

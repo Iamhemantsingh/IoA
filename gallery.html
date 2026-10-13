@@ -52,6 +52,8 @@ html.font-size-increase {
 </style>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="assets/js/accessibility.js" defer></script>
+  <script src="assets/js/rti-modal.js" defer></script>
+  <script src="assets/js/site-search.js" defer></script>
   <script id="tailwind-config">
     tailwind.config={
       darkMode:"class",
@@ -240,7 +242,7 @@ html.font-size-increase {
         <div class="space-y-space-md">
           <h5 class="font-title-md text-title-md text-on-surface font-bold">Public Governance</h5>
           <ul class="space-y-space-xs text-body-sm font-body-sm text-on-surface-variant">
-            <li><a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="#"><span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>Right to Information (RTI Cell)</a></li>
+            <li><a class="hover:text-primary transition-colors flex items-center gap-space-xxs cursor-pointer" href="#rti-modal" data-action="rti-modal"><span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>Right to Information (RTI Cell)</a></li>
             <li><a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="#"><span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>Citizens' Charter &amp; Redressal</a></li>
             <li><a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="docs.html?category=notifications-tenders"><span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>Tenders, RFPs &amp; Public Auctions</a></li>
             <li><a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="#"><span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>Central Archaeological Library Access</a></li>
