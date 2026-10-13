@@ -92,7 +92,7 @@ function scanGallery(dir, relativeDir = '') {
         results.push({
           filename: entry.name,
           relativePath: subRel,
-          src: `assets/images/gallery/${subRel}`,
+          src: `/assets/images/gallery/${subRel}`,
           title: title,
           category: category,
           subfolder: relativeDir || null,
@@ -128,7 +128,7 @@ function scanDocs(category) {
       if (ALLOWED_DOC_EXTS.has(ext)) {
         const fullPath = path.join(targetDir, entry.name);
         const stats = fs.statSync(fullPath);
-        const relUrl = category ? `assets/docs/${category}/${entry.name}` : `assets/docs/${entry.name}`;
+        const relUrl = category ? `/assets/docs/${category}/${entry.name}` : `/assets/docs/${entry.name}`;
 
         results.push({
           filename: entry.name,

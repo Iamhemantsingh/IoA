@@ -63,7 +63,7 @@
       desc: "Official excavation and survey interim research report",
       category: "Research Document",
       icon: "picture_as_pdf",
-      url: prefix + "assets/docs/research-excavation/Sinauli_Excavation_Interim_Report_2026.pdf",
+      url: "/assets/docs/research-excavation/Sinauli_Excavation_Interim_Report_2026.pdf",
       keywords: ["sinauli", "excavation", "report", "interim", "chariot", "copper hoard", "pdf", "research"]
     },
     {
@@ -95,7 +95,7 @@
       desc: "Download complete PGDA information prospectus & syllabus PDF",
       category: "Admissions Document",
       icon: "download",
-      url: prefix + "assets/docs/admissions/IoA_Prospectus_2027.pdf",
+      url: "/assets/docs/admissions/IoA_Prospectus_2027.pdf",
       keywords: ["prospectus", "download", "brochure", "syllabus", "admissions pdf", "pgda prospectus", "handbook"]
     },
     {
@@ -119,7 +119,7 @@
       desc: "Procurement and supply tender document for campus laboratory equipment",
       category: "Tenders Document",
       icon: "picture_as_pdf",
-      url: prefix + "assets/docs/notifications-tenders/E-Tender_Notice_Campus_Equipment_2026.pdf",
+      url: "/assets/docs/notifications-tenders/E-Tender_Notice_Campus_Equipment_2026.pdf",
       keywords: ["tender notice", "equipment", "procurement", "pdf", "campus equipment"]
     },
     {
