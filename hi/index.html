@@ -28,22 +28,36 @@
     /* Hindi body text uses Noto Sans Devanagari */
     body { font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif; }
 
-    @keyframes galleryScroll {
-      0%   { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .gallery-track {
-      display: flex;
-      width: max-content;
-      animation: galleryScroll 40s linear infinite;
-    }
-    .gallery-marquee-container:hover .gallery-track {
-      animation-play-state: paused !important;
-    }
-
     /* Devanagari heading overrides */
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Noto Serif Devanagari', 'Noto Serif', serif;
+    }
+    .nav-tab-item {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.45rem 0.8rem;
+      border-radius: 0.5rem;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #55433e;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid transparent;
+      font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+    }
+    .nav-tab-item:hover {
+      color: #6e2510;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-color: rgba(140, 59, 36, 0.35);
+      box-shadow: 0 0 16px rgba(140, 59, 36, 0.25), 0 0 4px rgba(140, 59, 36, 0.15);
+      transform: translateY(-1px);
+    }
+    .nav-tab-item.active {
+      background-color: #8c3b24;
+      color: #ffffff;
+      border-color: #8c3b24;
+      box-shadow: 0 2px 10px rgba(140, 59, 36, 0.35);
     }
     html.font-size-decrease {
       font-size: 87.5% !important;
@@ -99,40 +113,37 @@
     </div>
 
     <!-- Institute Identity Bar -->
-    <div class="bg-surface-container-low">
+    <div class="bg-surface-container-low border-b border-[#dbc1ba]/20">
       <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-sm flex items-center justify-between gap-space-md">
         <div class="flex items-center gap-space-md lg:gap-space-lg">
-          <img alt="भारतीय पुरातत्व सर्वेक्षण लोगो" class="w-auto object-contain h-14" src="/assets/images/ioa-logo.svg">
-          <div class="flex flex-col justify-center">
-            <span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-tight" style="font-family:'Noto Serif Devanagari','Noto Serif',serif;">पुरातत्व संस्थान, पं. दीनदयाल उपाध्याय परिसर</span>
-            <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-0.5" style="font-family:'Noto Sans Devanagari','Plus Jakarta Sans',sans-serif;">भारतीय पुरातत्व सर्वेक्षण • ज्ञान पार्क-II, ग्रेटर नोएडा</span>
-          </div>
+          <a href="index.html" class="flex items-center gap-space-md lg:gap-space-lg">
+            <img alt="भारतीय पुरातत्व सर्वेक्षण लोगो" class="w-auto object-contain h-14" src="/assets/images/ioa-logo.svg">
+            <div class="flex flex-col justify-center">
+              <span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-tight" style="font-family:'Noto Serif Devanagari','Noto Serif',serif;">पुरातत्व संस्थान, पं. दीनदयाल उपाध्याय परिसर</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-0.5" style="font-family:'Noto Sans Devanagari','Plus Jakarta Sans',sans-serif;">भारतीय पुरातत्व सर्वेक्षण • ज्ञान पार्क-II, ग्रेटर नोएडा</span>
+            </div>
+          </a>
         </div>
       </div>
     </div>
 
-    <!-- Primary Navigation -->
-    <div class="bg-surface shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <!-- Navigation Bar with Individual Tabs and Diffused Glow Hover -->
+    <div class="bg-surface shadow-[0_2px_12px_rgba(0,0,0,0.05)] border-b border-[#dbc1ba]/30">
       <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop h-14 flex items-center justify-between">
-        <nav class="hidden lg:flex items-center gap-space-xs xl:gap-space-sm h-full" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg">
-          <a aria-current="page" class="px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary-container font-bold rounded-lg font-label-lg text-label-lg" href="#about-institute">हमारे बारे में</a>
-          <a class="text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg px-space-sm py-space-xs transition-colors" href="#courses-offered">शैक्षणिक कार्यक्रम</a>
-          <a class="text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg px-space-sm py-space-xs transition-colors" href="../gallery.html">शोध एवं उत्खनन</a>
-          <a class="text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg px-space-sm py-space-xs transition-colors" href="../gallery.html">संग्रहालय एवं दीर्घाएँ</a>
-          <a class="text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg px-space-sm py-space-xs transition-colors" href="../coming-soon.html?page=छात्र+पोर्टल">छात्र पोर्टल</a>
-          <a class="text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg px-space-sm py-space-xs transition-colors" href="#selection-process">प्रवेश</a>
-          <a class="text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg px-space-sm py-space-xs transition-colors" href="../coming-soon.html?page=अधिसूचनाएँ">अधिसूचनाएँ एवं निविदाएँ</a>
-          <a class="text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg px-space-sm py-space-xs transition-colors" href="#">संपर्क करें</a>
+        <nav class="hidden lg:flex items-center gap-1 xl:gap-2 h-full py-1">
+          <a href="#about-institute" class="nav-tab-item active">हमारे बारे में</a>
+          <a href="#courses-offered" class="nav-tab-item">शैक्षणिक कार्यक्रम</a>
+          <a href="../docs.html?category=research-excavation" class="nav-tab-item">शोध एवं उत्खनन</a>
+          <a href="../gallery.html" class="nav-tab-item">दीर्घा</a>
+          <a href="../coming-soon.html?page=छात्र+पोर्टल" class="nav-tab-item">छात्र पोर्टल</a>
+          <a href="../docs.html?category=admissions" class="nav-tab-item">प्रवेश</a>
+          <a href="../docs.html?category=notifications-tenders" class="nav-tab-item">अधिसूचनाएँ एवं निविदाएँ</a>
+          <a href="../whos-who.html" class="nav-tab-item">परिचय (Who's Who)</a>
+          <a href="#contact-section" class="nav-tab-item">संपर्क करें</a>
         </nav>
-
-        <div class="flex items-center justify-between w-full lg:w-auto gap-space-md">
-          <!-- Search -->
-          <div class="relative flex items-center">
-            <span class="material-symbols-outlined absolute left-3 text-secondary text-[20px] pointer-events-none">search</span>
-            <input class="bg-surface-container-low pl-10 pr-space-md py-space-xs text-body-sm font-body-md text-on-surface placeholder:text-secondary rounded-lg focus:outline-none w-56 md:w-72 transition-all" placeholder="अभिलेख, खनन रिपोर्ट, पाठ्यक्रम खोजें..." type="search">
-          </div>
-          <!-- Mobile hamburger -->
-          <button aria-label="नेविगेशन मेनू खोलें" class="lg:hidden flex items-center justify-center p-space-xs text-on-surface-variant hover:text-on-surface" type="button">
+        <div class="lg:hidden flex items-center justify-between w-full">
+          <span class="font-label-md text-primary font-bold" style="font-family:'Noto Sans Devanagari','Plus Jakarta Sans',sans-serif;">नेविगेशन मेनू</span>
+          <button aria-label="नेविगेशन मेनू खोलें" class="flex items-center justify-center p-space-xs text-on-surface-variant hover:text-on-surface" type="button">
             <span class="material-symbols-outlined text-[24px]">menu</span>
           </button>
         </div>
@@ -144,24 +155,6 @@
 
   <main class="w-full pt-44 bg-surface">
     <div class="flex flex-col w-full">
-
-      <!-- ── Ticker ────────────────────────────────────────────────────────── -->
-      <section class="w-full bg-surface-container-high py-space-xs">
-        <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between gap-space-md">
-          <div class="flex items-center gap-space-xs shrink-0">
-            <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
-            <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">आधिकारिक राजपत्र सूचनाएँ</span>
-          </div>
-          <div class="overflow-hidden relative w-full text-body-sm font-body-md text-on-surface-variant">
-            <div class="inline-flex gap-space-2xl whitespace-nowrap animate-[marquee_28s_linear_infinite]">
-              <span class="flex items-center gap-space-xxs">
-                <span class="material-symbols-outlined text-[16px] text-tertiary">campaign</span>
-                <strong class="text-on-surface">प्रवेश 2027:</strong>&nbsp;अक्टूबर चयन प्रक्रिया के दौरान ऑनलाइन आवेदन पत्र संचालित किया जा रहा है।
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <!-- ── Hero Section ──────────────────────────────────────────────────── -->
       <section class="relative w-full overflow-hidden bg-gradient-to-b from-[#b8cad7] via-[#f1e6da] to-[#ecdcd3] border-b border-[#dbc1ba]">
@@ -442,33 +435,7 @@
               </div>
             </article>
 
-            <!-- Card 4: Project Mausam -->
-            <article class="h-full bg-white/75 backdrop-blur-md border border-white/60 hover:border-[#8c3b24]/30 rounded-xl p-space-lg shadow-sm hover:shadow-xl hover:shadow-[#8c3b24]/10 transition-all duration-300 ease-out hover:-translate-y-1.5 flex flex-col justify-between space-y-space-md">
-              <div class="space-y-space-xs flex-1 flex flex-col">
-                <div class="flex items-center justify-between gap-space-xs">
-                  <span class="inline-flex items-center gap-space-xxs bg-tertiary-container text-on-tertiary font-label-sm text-label-sm px-space-xs py-space-xxs rounded font-bold uppercase">
-                    <span class="material-symbols-outlined text-[12px]">flag</span>विशेष परियोजना
-                  </span>
-                  <span class="text-secondary font-label-sm text-label-sm flex items-center gap-space-xxs">
-                    <span class="material-symbols-outlined text-[14px]">event</span>पहल
-                  </span>
-                </div>
-                <h3 class="font-title-lg text-title-lg text-on-surface leading-snug pt-space-xxs" style="font-family:'Noto Sans Devanagari','Plus Jakarta Sans',sans-serif;">प्रोजेक्ट मौसम का प्रारंभ</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed flex-1" style="font-family:'Noto Sans Devanagari','Plus Jakarta Sans',sans-serif;">पुरातात्विक एवं ऐतिहासिक शोध के माध्यम से हिन्द महासागर के विश्व में प्राचीन समुद्री मार्गों एवं सांस्कृतिक संबंधों को पुनर्जीवित करने की बहु-विषयक पहल।</p>
-              </div>
-              <div class="pt-space-xs border-t border-surface-container">
-                <div class="flex items-center justify-between text-body-sm font-label-md text-secondary">
-                  <span class="flex items-center gap-space-xxs">
-                    <span class="material-symbols-outlined text-[16px] text-tertiary">sailing</span>समुद्री विरासत
-                  </span>
-                  <span class="flex items-center gap-space-xxs text-primary font-bold">
-                    <span class="material-symbols-outlined text-[16px]">public</span>राष्ट्रीय मिशन
-                  </span>
-                </div>
-              </div>
-            </article>
-
-            <!-- Card 5: Swachhata Drive -->
+            <!-- Card 4: Swachhata Drive -->
             <article class="h-full bg-white/75 backdrop-blur-md border border-white/60 hover:border-[#8c3b24]/30 rounded-xl p-space-lg shadow-sm hover:shadow-xl hover:shadow-[#8c3b24]/10 transition-all duration-300 ease-out hover:-translate-y-1.5 flex flex-col justify-between space-y-space-md">
               <div class="space-y-space-xs flex-1 flex flex-col">
                 <div class="flex items-center justify-between gap-space-xs">
@@ -494,7 +461,7 @@
               </div>
             </article>
 
-            <!-- Card 6: Foundation Day -->
+            <!-- Card 5: Foundation Day -->
             <article class="h-full bg-white/75 backdrop-blur-md border border-white/60 hover:border-[#8c3b24]/30 rounded-xl p-space-lg shadow-sm hover:shadow-xl hover:shadow-[#8c3b24]/10 transition-all duration-300 ease-out hover:-translate-y-1.5 flex flex-col justify-between space-y-space-md">
               <div class="space-y-space-xs flex-1 flex flex-col">
                 <div class="flex items-center justify-between gap-space-xs">
@@ -524,11 +491,19 @@
         </div>
       </section>
 
-      <!-- ── Selection Process ──────────────────────────────────────────────── -->
-      <section class="w-full bg-surface py-space-3xl" id="selection-process">
+      <!-- ── Educational Services ──────────────────────────────────────────── -->
+      <section class="w-full bg-surface py-space-3xl">
         <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop space-y-space-2xl">
           <div class="text-center max-w-2xl mx-auto space-y-space-xs">
-            <!-- placeholder for educational services - kept for structural parity -->
+            <h2 class="font-headline-lg text-headline-lg text-on-surface" style="font-family:'Noto Serif Devanagari','Noto Serif',serif;">शैक्षणिक सेवाएँ</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter-desktop">
+            <div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center space-y-space-sm group">
+              <div class="w-16 h-16 rounded-xl bg-surface-container flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+                <span class="material-symbols-outlined text-[32px] text-primary group-hover:text-on-primary">gavel</span>
+              </div>
+              <h3 class="font-title-lg text-title-lg text-on-surface" style="font-family:'Noto Sans Devanagari','Plus Jakarta Sans',sans-serif;">जल्द आ रहा है...</h3>
+            </div>
           </div>
         </div>
       </section>
@@ -553,7 +528,15 @@
                   <span class="font-label-lg text-label-lg font-bold flex items-center gap-space-xs text-primary">
                     <span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>ऑनलाइन आवेदन पोर्टल प्रोटोकॉल
                   </span>
-                  <p class="font-body-sm text-body-sm" style="font-family:'Noto Sans Devanagari','Plus Jakarta Sans',sans-serif;"><strong>सूचना:</strong> ऑनलाइन आवेदन पत्र चयन प्रक्रिया के दौरान उपलब्ध रहेगा। सभी संभावित आवेदकों को प्राचीन भारतीय इतिहास, संस्कृति, पुरातत्व अथवा संस्कृत में स्नातकोत्तर अभिलेख निर्धारित कटऑफ तिथि से पूर्व जमा करने होंगे।</p>
+                  <p class="font-body-sm text-body-sm" style="font-family:'Noto Sans Devanagari','Plus Jakarta Sans',sans-serif;"><strong>सूचना:</strong></p>
+                  <ul class="list-disc pl-5 space-y-1.5 font-body-sm text-body-sm text-on-secondary-container" style="font-family:'Noto Sans Devanagari','Plus Jakarta Sans',sans-serif;">
+                    <li>आवेदन पत्र को पूर्ण रूप से भरकर, हस्ताक्षरित कर, सभी आवश्यक सहायक दस्तावेजों की स्व-प्रमाणित प्रतियों के साथ स्कैन किया जाना चाहिए।</li>
+                    <li>सभी दस्तावेजों को एक ही (<strong>SINGLE</strong>) सुपाठ्य समेकित PDF दस्तावेज़ (अधिकतम फ़ाइल आकार: 15 MB) में संकलित किया जाना आवश्यक है। एकाधिक फाइलें, ज़िप संग्रह (zip archives), या क्लाउड ड्राइव लिंक (जैसे Google Drive) स्वीकार <strong>नहीं</strong> किए जाएंगे।</li>
+                    <li>समेकित PDF को ईमेल द्वारा प्रेषित किया जाना चाहिए: <a href="mailto:admissions.pduia@gmail.com" class="font-semibold underline hover:text-primary">admissions.pduia@gmail.com</a></li>
+                    <li>ईमेल का विषय (Subject Line): विषय को कड़ाई से इस प्रारूप में लिखा जाना चाहिए:<br><span class="inline-block mt-0.5 font-mono text-[11px] bg-white/70 px-2 py-0.5 rounded border border-white/80 font-semibold text-primary">&quot;Application for Admission to PGDA 2027 – [Candidate&#39;s Full Name]&quot;</span></li>
+                    <li>ईमेल के माध्यम से पूर्ण आवेदन प्राप्त होने की अंतिम तिथि एवं समय <strong>31/10/2026 सायं 6:00 बजे (IST)</strong> तक है।</li>
+                    <li>31/10/2026 को रात्रि 11:59 बजे (IST) के बाद प्राप्त आवेदनों को सीधे निरस्त कर दिया जाएगा। ईमेल ट्रांसमिशन विलंब, नेटवर्क विफलता, या मेलबॉक्स क्षमता त्रुटियों के लिए संस्थान जिम्मेदार नहीं होगा।</li>
+                  </ul>
                 </div>
                 <!-- Steps -->
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-xs">
@@ -584,15 +567,15 @@
                   <h3 class="font-headline-sm text-headline-sm text-on-surface" style="font-family:'Noto Serif Devanagari','Noto Serif',serif;">संस्थान प्रवेश</h3>
                   <p class="font-label-sm text-label-sm text-secondary uppercase tracking-wider" style="font-family:'Noto Sans Devanagari','Plus Jakarta Sans',sans-serif;">पुरातत्व में स्नातकोत्तर डिप्लोमा (PGDA)</p>
                 </div>
-                <p class="font-body-sm text-body-sm text-on-surface-variant" style="font-family:'Noto Sans Devanagari','Plus Jakarta Sans',sans-serif;">प्रवेश पोर्टल प्रतिवर्ष 15 अक्टूबर से 15 नवंबर के बीच संचालित होता है। सुनिश्चित करें कि सभी शैक्षणिक दस्तावेज DigiLocker के माध्यम से सत्यापित हों।</p>
+                <p class="font-body-sm text-body-sm text-on-surface-variant" style="font-family:'Noto Sans Devanagari','Plus Jakarta Sans',sans-serif;">पुरातत्व में स्नातकोत्तर डिप्लोमा (PGDA-2027) में प्रवेश हेतु एडमिशन पोर्टल अब लाइव है।</p>
                 <div class="space-y-space-xs pt-space-xs">
-                  <a class="w-full py-space-sm bg-primary text-on-primary font-label-lg text-label-lg rounded-lg shadow hover:bg-primary-container transition-all flex items-center justify-center gap-space-xs" href="#">
-                    <span class="material-symbols-outlined text-[18px]">launch</span>
-                    <span style="font-family:'Noto Sans Devanagari','Plus Jakarta Sans',sans-serif;">ऑनलाइन आवेदन करें</span>
-                  </a>
-                  <a class="w-full py-space-sm bg-surface-container-lowest/90 backdrop-blur-sm border border-surface-container text-on-surface font-label-lg text-label-lg rounded-lg hover:bg-surface-container-high transition-colors flex items-center justify-center gap-space-xs" href="/assets/docs/admissions/IoA_Prospectus_2027.pdf" download>
+                  <a class="w-full py-space-sm bg-primary text-on-primary font-label-lg text-label-lg rounded-lg shadow hover:bg-primary-container transition-all flex items-center justify-center gap-space-xs" href="/assets/docs/admissions/prospectus_2027_hindi.pdf" download>
                     <span class="material-symbols-outlined text-[18px]">download</span>
                     <span style="font-family:'Noto Sans Devanagari','Plus Jakarta Sans',sans-serif;">विवरणिका 2027 डाउनलोड करें (PDF)</span>
+                  </a>
+                  <a class="w-full py-space-sm bg-surface-container-lowest/90 backdrop-blur-sm border border-surface-container text-on-surface font-label-lg text-label-lg rounded-lg hover:bg-surface-container-high transition-colors flex items-center justify-center gap-space-xs shadow-xs" href="/assets/docs/admissions/admission_form_hindi_2027.pdf" download>
+                    <span class="material-symbols-outlined text-[18px]">description</span>
+                    <span style="font-family:'Noto Sans Devanagari','Plus Jakarta Sans',sans-serif;">आवेदन पत्र डाउनलोड करें (PDF)</span>
                   </a>
                 </div>
               </div>
@@ -625,7 +608,7 @@
   </main>
 
   <!-- ═══════════════════════════════════════════════════════════ FOOTER ═══ -->
-  <footer class="w-full bg-surface-container-low mt-space-3xl">
+  <footer class="w-full bg-surface-container-low mt-space-3xl" id="contact-section">
 
     <!-- External Portals bar -->
     <div class="bg-surface-container">
@@ -656,7 +639,7 @@
           <h5 class="font-title-md text-title-md text-on-surface font-bold" style="font-family:'Noto Sans Devanagari','Plus Jakarta Sans',sans-serif;">शैक्षणिक विभाग</h5>
           <ul class="space-y-space-xs text-body-sm font-body-sm text-on-surface-variant">
             <li>
-              <a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="#">
+              <a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="#courses-offered">
                 <span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>
                 <span style="font-family:'Noto Sans Devanagari','Plus Jakarta Sans',sans-serif;">पुरातत्व में स्नातकोत्तर डिप्लोमा (PGDA)</span>
               </a>
@@ -675,31 +658,31 @@
               </a>
             </li>
             <li>
-              <a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="#">
+              <a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="../coming-soon.html?page=नागरिक+चार्टर+एवं+निवारण">
                 <span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>
                 <span style="font-family:'Noto Sans Devanagari','Plus Jakarta Sans',sans-serif;">नागरिक चार्टर एवं निवारण</span>
               </a>
             </li>
             <li>
-              <a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="#">
+              <a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="../docs.html?category=notifications-tenders">
                 <span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>
                 <span style="font-family:'Noto Sans Devanagari','Plus Jakarta Sans',sans-serif;">निविदाएँ, RFP एवं सार्वजनिक नीलामी</span>
               </a>
             </li>
             <li>
-              <a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="#">
+              <a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="../coming-soon.html?page=केंद्रीय+पुरातात्विक+पुस्तकालय">
                 <span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>
                 <span style="font-family:'Noto Sans Devanagari','Plus Jakarta Sans',sans-serif;">केंद्रीय पुरातात्विक पुस्तकालय</span>
               </a>
             </li>
             <li>
-              <a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="#">
+              <a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="../coming-soon.html?page=वार्षिक+पुरातत्व+समीक्षा">
                 <span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>
                 <span style="font-family:'Noto Sans Devanagari','Plus Jakarta Sans',sans-serif;">वार्षिक पुरातत्व समीक्षा (IAR)</span>
               </a>
             </li>
             <li>
-              <a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="#">
+              <a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="../whos-who.html">
                 <span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>
                 <span style="font-family:'Noto Sans Devanagari','Plus Jakarta Sans',sans-serif;">परिचय पुस्तिका (Who's Who)</span>
               </a>

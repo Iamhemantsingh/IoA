@@ -1,12 +1,42 @@
 [
   {
-    "filename": "IoA_Prospectus_2027.pdf",
-    "title": "IoA Prospectus 2027",
+    "filename": "prospectus_2027_english.pdf",
+    "title": "Prospectus 2027 English",
     "category": "admissions",
-    "url": "/assets/docs/admissions/IoA_Prospectus_2027.pdf",
+    "url": "/assets/docs/admissions/prospectus_2027_english.pdf",
     "ext": "PDF",
-    "size": "875 Bytes",
-    "date": "10 Oct 2026",
-    "mtime": 1791634149629.092
+    "size": "784.44 KB",
+    "date": "16 Oct 2026",
+    "mtime": 1792172308559
+  },
+  {
+    "filename": "admission_form_2027.pdf",
+    "title": "Admission Form 2027",
+    "category": "admissions",
+    "url": "/assets/docs/admissions/admission_form_2027.pdf",
+    "ext": "PDF",
+    "size": "1.03 MB",
+    "date": "16 Oct 2026",
+    "mtime": 1792172308561
+  },
+  {
+    "filename": "prospectus_2027_hindi.pdf",
+    "title": "Prospectus 2027 Hindi",
+    "category": "admissions",
+    "url": "/assets/docs/admissions/prospectus_2027_hindi.pdf",
+    "ext": "PDF",
+    "size": "3.77 MB",
+    "date": "16 Oct 2026",
+    "mtime": 1792172308563
+  },
+  {
+    "filename": "admission_form_hindi_2027.pdf",
+    "title": "Admission Form Hindi 2027",
+    "category": "admissions",
+    "url": "/assets/docs/admissions/admission_form_hindi_2027.pdf",
+    "ext": "PDF",
+    "size": "1.2 MB",
+    "date": "16 Oct 2026",
+    "mtime": 1792172308564
   }
 ]

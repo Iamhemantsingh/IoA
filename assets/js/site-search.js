@@ -91,12 +91,36 @@
       keywords: ["admissions", "selection", "intake", "registration", "exam", "dates", "eligibility", "process", "apply"]
     },
     {
-      title: "Official Prospectus 2027 (Download PDF)",
+      title: "PGDA Prospectus 2027 (English PDF)",
       desc: "Download complete PGDA information prospectus & syllabus PDF",
       category: "Admissions Document",
       icon: "download",
-      url: "/assets/docs/admissions/IoA_Prospectus_2027.pdf",
-      keywords: ["prospectus", "download", "brochure", "syllabus", "admissions pdf", "pgda prospectus", "handbook"]
+      url: "/assets/docs/admissions/prospectus_2027_english.pdf",
+      keywords: ["prospectus", "download", "brochure", "syllabus", "admissions pdf", "pgda prospectus", "handbook", "english"]
+    },
+    {
+      title: "PGDA Application Form 2027 (English PDF)",
+      desc: "Download PGDA 2027 official application form",
+      category: "Admissions Document",
+      icon: "download",
+      url: "/assets/docs/admissions/admission_form_2027.pdf",
+      keywords: ["application form", "admission form", "download form", "pgda form", "form 2027"]
+    },
+    {
+      title: "पीजीडीए विवरणिका 2027 (हिन्दी PDF)",
+      desc: "पीजीडीए 2027 सम्पूर्ण सूचना विवरणिका एवं पाठ्यविवरण",
+      category: "Admissions Document",
+      icon: "download",
+      url: "/assets/docs/admissions/prospectus_2027_hindi.pdf",
+      keywords: ["prospectus", "hindi", "विवरणिका", "प्रवेश", "पाठ्यविवरण"]
+    },
+    {
+      title: "पीजीडीए आवेदन पत्र 2027 (हिन्दी PDF)",
+      desc: "पीजीडीए 2027 आधिकारिक आवेदन पत्र डाउनलोड करें",
+      category: "Admissions Document",
+      icon: "download",
+      url: "/assets/docs/admissions/admission_form_hindi_2027.pdf",
+      keywords: ["application form", "hindi", "आवेदन पत्र", "प्रवेश फॉर्म"]
     },
     {
       title: "Admissions Document Archive",

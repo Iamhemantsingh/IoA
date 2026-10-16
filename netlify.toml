@@ -1,0 +1,33 @@
+[build]
+  publish = "."
+
+# Ensure correct headers and CORS for JSON data manifests
+[[headers]]
+  for = "/assets/data/*.json"
+  [headers.values]
+    Content-Type = "application/json; charset=utf-8"
+    Cache-Control = "public, max-age=0, must-revalidate"
+    Access-Control-Allow-Origin = "*"
+
+# Allow PDF previews and downloads with open CORS
+[[headers]]
+  for = "/assets/docs/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+# Long-term cache for static images and logos
+[[headers]]
+  for = "/assets/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+# HTML pages should revalidate so updates reflect immediately
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/hi/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="hi" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>दीर्घा एवं अभिलेखागार – पुरातत्व संस्थान, पं. दीनदयाल उपाध्याय परिसर</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <style>
+    @layer base {
+      html, body { margin:0; padding:0; }
+      body { overscroll-behavior:none; }
+      main>:first-child { margin-top:0!important; }
+      main>:last-child { margin-bottom:0!important; }
+    }
+    ::-webkit-scrollbar { display:none; }
+    body { font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Noto Serif Devanagari', 'Noto Serif', serif; }
+    .nav-tab-item {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.45rem 0.8rem;
+      border-radius: 0.5rem;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #55433e;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid transparent;
+      font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+    }
+    .nav-tab-item:hover {
+      color: #6e2510;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-color: rgba(140, 59, 36, 0.35);
+      box-shadow: 0 0 16px rgba(140, 59, 36, 0.25), 0 0 4px rgba(140, 59, 36, 0.15);
+      transform: translateY(-1px);
+    }
+    .nav-tab-item.active {
+      background-color: #8c3b24;
+      color: #ffffff;
+      border-color: #8c3b24;
+      box-shadow: 0 2px 10px rgba(140, 59, 36, 0.35);
+    }
+    html.font-size-decrease { font-size: 87.5% !important; }
+    html.font-size-increase { font-size: 112.5% !important; }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/accessibility.js" defer></script>
+  <script src="/assets/js/rti-modal.js" defer></script>
+  <script src="/assets/js/site-search.js" defer></script>
+  <script src="/assets/js/mobile-nav.js" defer></script>
+  <script id="tailwind-config">
+    tailwind.config={
+      darkMode:"class",
+      theme:{
+        extend:{
+          colors:{
+            "inverse-primary":"#ffb5a0","outline":"#88726c","surface":"#fdf9f4","secondary":"#655d59",
+            "on-primary-fixed":"#3b0900","primary-fixed":"#ffdbd1","on-primary":"#ffffff","secondary-container":"#ece0db",
+            "tertiary":"#593400","surface-dim":"#ddd9d5","on-surface":"#1c1c19","secondary-fixed-dim":"#cfc4bf",
+            "primary-container":"#8c3b24","on-secondary-fixed-variant":"#4d4542","error-container":"#ffdad6",
+            "on-error":"#ffffff","on-error-container":"#93000a","tertiary-fixed-dim":"#fbba6f","inverse-surface":"#31302d",
+            "on-secondary-container":"#6b635f","surface-tint":"#99452d","on-primary-fixed-variant":"#7b2e18",
+            "background":"#fdf9f4","surface-bright":"#fdf9f4","tertiary-container":"#784904","on-secondary":"#ffffff",
+            "surface-container-high":"#ebe8e3","surface-container-highest":"#e6e2dd","on-tertiary-container":"#fdbb70",
+            "primary":"#6e2510","tertiary-fixed":"#ffddba","secondary-fixed":"#ece0db","inverse-on-surface":"#f4f0eb",
+            "on-tertiary-fixed-variant":"#673d00","on-tertiary":"#ffffff","surface-container-low":"#f7f3ee",
+            "primary-fixed-dim":"#ffb5a0","surface-container":"#f1ede8","on-primary-container":"#ffb7a4",
+            "on-background":"#1c1c19","surface-container-lowest":"#ffffff","outline-variant":"#dbc1ba",
+            "on-surface-variant":"#55433e","on-secondary-fixed":"#201a18","error":"#ba1a1a","surface-variant":"#e6e2dd",
+            "on-tertiary-fixed":"#2b1700"
+          },
+          borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},
+          spacing:{
+            "gutter-desktop":"2rem","space-3xl":"4rem","space-4xl":"6rem","space-xs":"0.5rem","space-2xl":"3rem",
+            "container-max":"1280px","space-xxs":"0.25rem","margin-mobile":"1rem","space-lg":"1.5rem",
+            "margin-tablet":"2rem","gutter-mobile":"1rem","gutter-tablet":"1.5rem","space-xl":"2rem",
+            "space-sm":"0.75rem","space-md":"1rem","margin-desktop":"3rem"
+          },
+          fontFamily:{
+            "title-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],
+            "display-hero-mobile":["Noto Serif"],"headline-sm":["Noto Serif"],"display-hero":["Noto Serif"],
+            "headline-md":["Noto Serif"],"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],
+            "body-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-lg":["Noto Serif"],
+            "title-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Noto Serif"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 w-full z-50 bg-surface shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+  <!-- Top Sovereign Bar with Search replacing screen reader -->
+  <div class="bg-inverse-surface text-inverse-on-surface">
+    <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop h-10 flex items-center justify-between text-body-sm">
+      <div class="flex items-center gap-space-md">
+        <span class="font-label-md text-label-md tracking-wider uppercase opacity-90">भारत सरकार | Government of India</span>
+        <span class="hidden sm:inline-block opacity-40">|</span>
+        <span class="hidden sm:inline-block font-label-md text-label-md opacity-90">संस्कृति मंत्रालय | Ministry of Culture</span>
+      </div>
+      <div class="flex items-center gap-space-sm sm:gap-space-md">
+        <div class="hidden md:flex items-center gap-space-xs font-label-sm text-label-sm">
+          <button data-font-size="decrease" aria-label="Decrease font size" class="px-space-xs py-space-xxs hover:bg-surface/20 rounded transition-colors" type="button">A-</button>
+          <button data-font-size="reset" aria-label="Reset font size" class="px-space-xs py-space-xxs hover:bg-surface/20 rounded transition-colors font-bold" type="button">A</button>
+          <button data-font-size="increase" aria-label="Increase font size" class="px-space-xs py-space-xxs hover:bg-surface/20 rounded transition-colors" type="button">A+</button>
+        </div>
+        <span class="hidden md:inline-block opacity-40">|</span>
+        <div class="flex items-center gap-space-xxs font-label-sm text-label-sm">
+          <a class="px-space-xs py-space-xxs text-inverse-on-surface hover:text-on-primary-container transition-colors" href="../gallery.html">English</a>
+        </div>
+        <span class="hidden sm:inline-block opacity-40">|</span>
+        <!-- Search bar shifted to top right -->
+        <div class="relative flex items-center">
+          <span class="material-symbols-outlined absolute left-2.5 text-[#cfc4bf] text-[16px] pointer-events-none">search</span>
+          <input class="bg-white/10 border border-white/20 pl-8 pr-3 py-1 text-xs text-inverse-on-surface placeholder:text-inverse-on-surface/60 rounded-md focus:outline-none focus:bg-white/20 focus:border-white/40 w-40 sm:w-56 transition-all" placeholder="खोजें / Search archives, syllabi..." type="search">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Institute Identity Bar -->
+  <div class="bg-surface-container-low border-b border-[#dbc1ba]/20">
+    <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-sm flex items-center justify-between gap-space-md">
+      <div class="flex items-center gap-space-md lg:gap-space-lg">
+        <a href="index.html" class="flex items-center gap-space-md lg:gap-space-lg">
+          <img alt="भारतीय पुरातत्व सर्वेक्षण लोगो" class="w-auto object-contain h-14" src="/assets/images/ioa-logo.svg">
+          <div class="flex flex-col justify-center">
+            <span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-tight">पुरातत्व संस्थान, पं. दीनदयाल उपाध्याय परिसर</span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-0.5">भारतीय पुरातत्व सर्वेक्षण • ज्ञान पार्क II, ग्रेटर नोएडा</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar with Individual Tabs and Diffused Glow Hover -->
+  <div class="bg-surface shadow-[0_2px_12px_rgba(0,0,0,0.05)] border-b border-[#dbc1ba]/30">
+    <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop h-14 flex items-center justify-between">
+      <nav class="hidden lg:flex items-center gap-1 xl:gap-2 h-full py-1">
+        <a href="index.html#about-institute" class="nav-tab-item">हमारे बारे में</a>
+        <a href="index.html#courses-offered" class="nav-tab-item">शैक्षणिक कार्यक्रम</a>
+        <a href="docs.html?category=research-excavation" class="nav-tab-item">शोध एवं उत्खनन</a>
+        <a href="gallery.html" class="nav-tab-item active">दीर्घा</a>
+        <a href="coming-soon.html?page=छात्र+पोर्टल" class="nav-tab-item">छात्र पोर्टल</a>
+        <a href="docs.html?category=admissions" class="nav-tab-item">प्रवेश</a>
+        <a href="docs.html?category=notifications-tenders" class="nav-tab-item">अधिसूचनाएँ एवं निविदाएँ</a>
+        <a href="whos-who.html" class="nav-tab-item">परिचय (Who's Who)</a>
+        <a href="index.html#contact-section" class="nav-tab-item">संपर्क करें</a>
+      </nav>
+      <div class="lg:hidden flex items-center justify-between w-full">
+        <span class="font-label-md text-primary font-bold">नेविगेशन मेनू</span>
+        <button aria-label="नेविगेशन मेनू खोलें" class="flex items-center justify-center p-space-xs text-on-surface-variant hover:text-on-surface" type="button">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <!-- MAIN -->
+  <main class="w-full pt-44 bg-surface min-h-[calc(100vh-200px)]">
+    <!-- Breadcrumb & Hero Banner -->
+    <section class="w-full bg-surface-container-low py-space-2xl border-b border-[#dbc1ba]/30">
+      <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop space-y-space-sm">
+        <nav aria-label="Breadcrumb" class="flex items-center gap-space-xxs text-body-sm text-secondary font-label-sm uppercase tracking-wider">
+          <a href="index.html" class="hover:text-primary transition-colors flex items-center gap-space-xxs">
+            <span class="material-symbols-outlined text-[16px]">home</span>मुख्य पृष्ठ
+          </a>
+          <span>/</span>
+          <span class="text-primary font-bold">दीर्घा एवं अभिलेखागार</span>
+        </nav>
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+          <!-- Filter chips -->
+          <div id="filter-container" class="flex flex-wrap items-center gap-space-xs font-label-md text-label-md">
+            <button class="filter-btn active px-space-sm py-space-xxs bg-primary-container text-on-primary rounded-lg transition-colors" data-filter="all">सभी तस्वीरें (<span id="total-count">0</span>)</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="w-full bg-surface py-space-3xl">
+      <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+        <!-- Empty State -->
+        <div id="empty-state" class="hidden text-center py-16 space-y-3">
+          <span class="material-symbols-outlined text-[48px] text-secondary">collections</span>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface">कोई तस्वीर नहीं मिली</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant">दीर्घा में तस्वीरें लोड की जा रही हैं। कृपया थोड़ी देर बाद पुनः देखें।</p>
+        </div>
+
+        <!-- Grid Container -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter-desktop" id="gallery-grid">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal (Pure Image View Only) -->
+    <div aria-modal="true" class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md hidden items-center justify-center p-4 md:p-8 transition-all duration-300 opacity-0" id="gallery-lightbox" role="dialog">
+      <button aria-label="Close Lightbox" class="absolute top-5 right-5 z-20 w-12 h-12 rounded-full bg-white/20 hover:bg-primary text-white flex items-center justify-center transition-colors shadow-2xl backdrop-blur-sm cursor-pointer" id="gallery-lightbox-close" type="button">
+        <span class="material-symbols-outlined text-[28px]">close</span>
+      </button>
+      <div class="relative max-w-6xl max-h-[92vh] flex items-center justify-center transform scale-95 transition-transform duration-300" id="gallery-lightbox-modal">
+        <img alt="दीर्घा दृश्य" class="w-auto h-auto max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl select-none" id="lightbox-img" src="">
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-container-low mt-space-3xl" id="contact-section">
+    <div class="bg-surface-container">
+      <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-lg flex flex-wrap items-center justify-between gap-space-md text-on-surface-variant font-label-md text-label-md">
+        <span class="font-bold uppercase tracking-wider text-tertiary">बाहरी पोर्टल:</span>
+        <a class="text-on-surface-variant hover:text-primary transition-colors" href="https://www.mygov.in" rel="noreferrer" target="_blank">MyGov नागरिक सहभागिता</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors" href="https://asi.nic.in" rel="noreferrer" target="_blank">भारतीय पुरातत्व सर्वेक्षण</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors" href="https://indiaculture.gov.in" rel="noreferrer" target="_blank">संस्कृति मंत्रालय</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors" href="https://www.incredibleindia.org" rel="noreferrer" target="_blank">अतुल्य भारत</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors" href="https://ncf.nic.in" rel="noreferrer" target="_blank">राष्ट्रीय संस्कृति निधि</a>
+      </div>
+    </div>
+    <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-3xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop">
+        <div class="space-y-space-md">
+          <h4 class="font-headline-sm text-headline-sm text-primary leading-snug">पुरातत्व संस्थान, पं. दीनदयाल उपाध्याय</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">संस्कृति मंत्रालय के अंतर्गत भारतीय पुरातत्व सर्वेक्षण की प्रमुख शीर्ष शैक्षणिक एवं शोध संस्था, जो स्नातकोत्तर पुरातात्विक शिक्षा, क्षेत्र अभिलेखशास्त्र एवं स्मारक संरक्षण के लिए समर्पित है।</p>
+        </div>
+        <div class="space-y-space-md">
+          <h5 class="font-title-md text-title-md text-on-surface font-bold">शैक्षणिक विभाग</h5>
+          <ul class="space-y-space-xs text-body-sm font-body-sm text-on-surface-variant">
+            <li><a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="index.html#courses-offered"><span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>पुरातत्व में स्नातकोत्तर डिप्लोमा (PGDA)</a></li>
+          </ul>
+        </div>
+        <div class="space-y-space-md">
+          <h5 class="font-title-md text-title-md text-on-surface font-bold">सार्वजनिक शासन</h5>
+          <ul class="space-y-space-xs text-body-sm font-body-sm text-on-surface-variant">
+            <li><a class="hover:text-primary transition-colors flex items-center gap-space-xxs cursor-pointer" href="#rti-modal" data-action="rti-modal"><span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>सूचना का अधिकार (RTI प्रकोष्ठ)</a></li>
+            <li><a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="coming-soon.html?page=नागरिक+चार्टर+एवं+निवारण"><span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>नागरिक चार्टर एवं निवारण</a></li>
+            <li><a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="docs.html?category=notifications-tenders"><span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>निविदाएँ, RFP एवं सार्वजनिक नीलामी</a></li>
+            <li><a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="coming-soon.html?page=केंद्रीय+पुरातात्विक+पुस्तकालय"><span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>केंद्रीय पुरातात्विक पुस्तकालय</a></li>
+            <li><a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="coming-soon.html?page=वार्षिक+पुरातत्व+समीक्षा"><span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>वार्षिक पुरातत्व समीक्षा (IAR)</a></li>
+            <li><a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="whos-who.html"><span class="material-symbols-outlined text-[16px] text-tertiary">arrow_right</span>परिचय पुस्तिका (Who's Who)</a></li>
+          </ul>
+        </div>
+        <div class="space-y-space-md">
+          <h5 class="font-title-md text-title-md text-on-surface font-bold">परिसर स्थान</h5>
+          <div class="space-y-space-xs text-body-sm font-body-sm text-on-surface-variant">
+            <p class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">location_on</span>भूखंड सं. 2, ज्ञान पार्क-II, ग्रेटर नोएडा, गौतम बुद्ध नगर, उत्तर प्रदेश – 201310, भारत</p>
+            <p class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary shrink-0">call</span>दूरभाष: +91-120-2333100</p>
+            <p class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary shrink-0">mail</span>ईमेल: administrator.ioa@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-surface-container-high py-space-lg">
+      <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant font-body-sm text-body-sm">
+        <p>© 2026 भारतीय पुरातत्व सर्वेक्षण (ASI), संस्कृति मंत्रालय, भारत सरकार। सर्वाधिकार सुरक्षित।</p>
+        <div class="flex flex-wrap items-center gap-space-md font-label-md text-label-md">
+          <a class="hover:text-primary transition-colors" href="#">गोपनीयता नीति</a>
+          <a class="hover:text-primary transition-colors" href="#">उपयोग की शर्तें</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      let currentImages = [];
+      let activeFilter = 'all';
+      let searchQuery = '';
+
+      // Elements
+      const grid = document.getElementById('gallery-grid');
+      const emptyState = document.getElementById('empty-state');
+      const filterContainer = document.getElementById('filter-container');
+      const searchInput = document.querySelector('header input[type="search"]');
+      const totalCount = document.getElementById('total-count');
+
+      // Lightbox elements
+      const lightbox = document.getElementById('gallery-lightbox');
+      const lightboxModal = document.getElementById('gallery-lightbox-modal');
+      const closeBtn = document.getElementById('gallery-lightbox-close');
+      const lightboxImg = document.getElementById('lightbox-img');
+
+      function openLightbox(item) {
+        lightboxImg.src = item.src;
+        lightboxImg.alt = item.category || 'दीर्घा दृश्य';
+
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+        setTimeout(() => {
+          lightbox.classList.remove('opacity-0');
+          lightboxModal.classList.remove('scale-95');
+          lightboxModal.classList.add('scale-100');
+        }, 10);
+      }
+
+      function closeLightbox() {
+        lightbox.classList.add('opacity-0');
+        lightboxModal.classList.remove('scale-100');
+        lightboxModal.classList.add('scale-95');
+        setTimeout(() => {
+          lightbox.classList.remove('flex');
+          lightbox.classList.add('hidden');
+        }, 300);
+      }
+
+      if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+      if (lightbox) {
+        lightbox.addEventListener('click', function(e) {
+          if (e.target === lightbox) closeLightbox();
+        });
+      }
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightbox && !lightbox.classList.contains('hidden')) {
+          closeLightbox();
+        }
+      });
+
+      // Render gallery cards - NO image names or filenames visible
+      function renderGallery() {
+        const filtered = currentImages.filter(img => {
+          const matchesCategory = (activeFilter === 'all' || img.category === activeFilter);
+          const matchesSearch = !searchQuery ||
+            img.category.toLowerCase().includes(searchQuery.toLowerCase());
+          return matchesCategory && matchesSearch;
+        });
+
+        if (filtered.length === 0) {
+          grid.innerHTML = '';
+          emptyState.classList.remove('hidden');
+          return;
+        }
+
+        emptyState.classList.add('hidden');
+
+        grid.innerHTML = filtered.map((item, idx) => `
+          <div class="gallery-card cursor-pointer bg-white/80 backdrop-blur-md border border-[#8c3b24]/20 rounded-xl overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-[#8c3b24]/15 transition-all duration-300 ease-out hover:-translate-y-2 group flex flex-col"
+               data-idx="${idx}">
+            <div class="relative h-56 bg-surface-container overflow-hidden">
+              <img alt="${item.category || 'दीर्घा छवि'}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="${item.src}">
+              <span class="absolute top-3 left-3 bg-primary text-on-primary font-label-sm text-label-sm px-space-xs py-space-xxs rounded uppercase shadow-sm">${item.category}</span>
+            </div>
+            <div class="p-space-sm px-space-md flex items-center justify-between text-body-sm bg-white/50 border-t border-[#8c3b24]/10">
+              <span class="font-label-sm text-label-sm text-secondary flex items-center gap-space-xxs">
+                <span class="material-symbols-outlined text-[14px]">event</span> ${item.date}
+              </span>
+              <span class="text-primary flex items-center gap-1 text-[12px] font-semibold">देखें <span class="material-symbols-outlined text-[14px]">zoom_in</span></span>
+            </div>
+          </div>
+        `).join('');
+
+        document.querySelectorAll('.gallery-card').forEach(card => {
+          card.addEventListener('click', () => {
+            const idx = parseInt(card.getAttribute('data-idx'), 10);
+            openLightbox(filtered[idx]);
+          });
+        });
+      }
+
+      function updateFilters(images) {
+        const categories = Array.from(new Set(images.map(img => img.category))).filter(Boolean);
+        totalCount.textContent = images.length;
+
+        let html = `
+          <button class="filter-btn ${activeFilter === 'all' ? 'active bg-primary-container text-on-primary' : 'bg-surface-container text-on-surface-variant'} px-space-sm py-space-xxs rounded-lg transition-colors" data-filter="all">सभी तस्वीरें (${images.length})</button>
+        `;
+
+        categories.forEach(cat => {
+          const count = images.filter(img => img.category === cat).length;
+          const isActive = activeFilter === cat;
+          html += `
+            <button class="filter-btn ${isActive ? 'active bg-primary-container text-on-primary' : 'bg-surface-container text-on-surface-variant hover:bg-surface-container-high'} px-space-sm py-space-xxs rounded-lg transition-colors" data-filter="${cat}">${cat} (${count})</button>
+          `;
+        });
+
+        filterContainer.innerHTML = html;
+
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+          btn.addEventListener('click', function() {
+            activeFilter = this.getAttribute('data-filter');
+            updateFilters(currentImages);
+            renderGallery();
+          });
+        });
+      }
+
+      let isLive = false;
+
+      async function loadGalleryImages() {
+        const isLocal = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+        if (isLocal) {
+          try {
+            const res = await fetch('/api/gallery?t=' + Date.now());
+            if (res.ok) {
+              isLive = true;
+              const data = await res.json();
+              const currentJson = JSON.stringify(currentImages.map(i => ({ f: i.filename, m: i.mtime })));
+              const newJson     = JSON.stringify(data.map(i => ({ f: i.filename, m: i.mtime })));
+              if (currentJson !== newJson) {
+                currentImages = data;
+                updateFilters(currentImages);
+                renderGallery();
+              }
+              return;
+            }
+          } catch (_) {}
+        }
+
+        try {
+          const res = await fetch('/assets/data/gallery.json');
+          if (res.ok) {
+            currentImages = await res.json();
+            updateFilters(currentImages);
+            renderGallery();
+          }
+        } catch (e) {
+          console.warn('दीर्घा सूची लोड करने में असमर्थ:', e);
+        }
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value.trim();
+          renderGallery();
+        });
+      }
+
+      loadGalleryImages();
+      setInterval(() => { if (isLive) loadGalleryImages(); }, 3000);
+    })();
+  </script>
+</body>
+</html>

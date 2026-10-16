@@ -115,7 +115,7 @@ html.font-size-increase {
         </div>
         <span class="hidden md:inline-block opacity-40">|</span>
         <div class="flex items-center gap-space-xxs font-label-sm text-label-sm">
-          <a class="px-space-xs py-space-xxs text-inverse-on-surface hover:text-on-primary-container transition-colors" href="hi/index.html">हिन्दी</a>
+          <a class="px-space-xs py-space-xxs text-inverse-on-surface hover:text-on-primary-container transition-colors" href="hi/gallery.html">हिन्दी</a>
         </div>
         <span class="hidden sm:inline-block opacity-40">|</span>
         <!-- Search bar shifted to top right (replacing screen reader tab) -->
@@ -293,7 +293,7 @@ html.font-size-increase {
 
       function openLightbox(item) {
         lightboxImg.src = item.src;
-        lightboxImg.alt = item.title || 'Gallery image';
+        lightboxImg.alt = item.category || 'Gallery image';
 
         lightbox.classList.remove('hidden');
         lightbox.classList.add('flex');
@@ -348,21 +348,15 @@ html.font-size-increase {
         grid.innerHTML = filtered.map((item, idx) => `
           <div class="gallery-card cursor-pointer bg-white/80 backdrop-blur-md border border-[#8c3b24]/20 rounded-xl overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-[#8c3b24]/15 transition-all duration-300 ease-out hover:-translate-y-2 group flex flex-col"
                data-idx="${idx}">
-            <div class="relative h-52 bg-surface-container overflow-hidden">
-              <img alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="${item.src}">
+            <div class="relative h-56 bg-surface-container overflow-hidden">
+              <img alt="${item.category || 'Gallery image'}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="${item.src}">
               <span class="absolute top-3 left-3 bg-primary text-on-primary font-label-sm text-label-sm px-space-xs py-space-xxs rounded uppercase shadow-sm">${item.category}</span>
             </div>
-            <div class="p-space-md space-y-space-xxs flex-1 flex flex-col justify-between">
-              <div>
-                <span class="font-label-sm text-label-sm text-secondary flex items-center gap-space-xxs">
-                  <span class="material-symbols-outlined text-[14px]">event</span> ${item.date}
-                </span>
-                <h3 class="font-title-md text-title-md text-on-surface leading-snug mt-1">${item.title}</h3>
-              </div>
-              <div class="pt-2 flex items-center justify-between text-body-sm font-label-md text-secondary border-t border-surface-container mt-2">
-                <span class="font-mono text-[11px] text-outline truncate max-w-[150px]">${item.filename}</span>
-                <span class="text-primary flex items-center gap-1 text-[12px] font-semibold">View <span class="material-symbols-outlined text-[14px]">zoom_in</span></span>
-              </div>
+            <div class="p-space-sm px-space-md flex items-center justify-between text-body-sm bg-white/50 border-t border-[#8c3b24]/10">
+              <span class="font-label-sm text-label-sm text-secondary flex items-center gap-space-xxs">
+                <span class="material-symbols-outlined text-[14px]">event</span> ${item.date}
+              </span>
+              <span class="text-primary flex items-center gap-1 text-[12px] font-semibold">View <span class="material-symbols-outlined text-[14px]">zoom_in</span></span>
             </div>
           </div>
         `).join('');
@@ -404,38 +398,39 @@ html.font-size-increase {
         });
       }
 
-      // Load gallery images: try dynamic API first (dev server), fall back to static manifest (Netlify)
-      let isLive = false; // true when dev-server API is reachable
+      // Load gallery images: dev server API on localhost, direct static manifest on production (Netlify)
+      let isLive = false;
 
       async function loadGalleryImages() {
-        try {
-          const res = await fetch('/api/gallery?t=' + Date.now());
-          if (res.ok) {
-            isLive = true;
-            const data = await res.json();
-            const currentJson = JSON.stringify(currentImages.map(i => ({ f: i.filename, m: i.mtime })));
-            const newJson     = JSON.stringify(data.map(i => ({ f: i.filename, m: i.mtime })));
-            if (currentJson !== newJson) {
-              currentImages = data;
-              updateFilters(currentImages);
-              renderGallery();
-            }
-            return; // success
-          }
-        } catch (_) { /* dev server not running – expected on Netlify */ }
-
-        // Static fallback: load the pre-built JSON manifest
-        if (currentImages.length === 0) {
+        const isLocal = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+        if (isLocal) {
           try {
-            const res = await fetch('/assets/data/gallery.json');
+            const res = await fetch('/api/gallery?t=' + Date.now());
             if (res.ok) {
-              currentImages = await res.json();
-              updateFilters(currentImages);
-              renderGallery();
+              isLive = true;
+              const data = await res.json();
+              const currentJson = JSON.stringify(currentImages.map(i => ({ f: i.filename, m: i.mtime })));
+              const newJson     = JSON.stringify(data.map(i => ({ f: i.filename, m: i.mtime })));
+              if (currentJson !== newJson) {
+                currentImages = data;
+                updateFilters(currentImages);
+                renderGallery();
+              }
+              return; // success
             }
-          } catch (e) {
-            console.warn('Static gallery manifest also unavailable:', e);
+          } catch (_) { /* dev server not running */ }
+        }
+
+        // Static manifest: load the pre-built JSON manifest
+        try {
+          const res = await fetch('/assets/data/gallery.json');
+          if (res.ok) {
+            currentImages = await res.json();
+            updateFilters(currentImages);
+            renderGallery();
           }
+        } catch (e) {
+          console.warn('Gallery manifest unavailable:', e);
         }
       }
 

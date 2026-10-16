@@ -115,7 +115,7 @@ html.font-size-increase {
         </div>
         <span class="hidden md:inline-block opacity-40">|</span>
         <div class="flex items-center gap-space-xxs font-label-sm text-label-sm">
-          <a class="px-space-xs py-space-xxs text-inverse-on-surface hover:text-on-primary-container transition-colors" href="hi/index.html">हिन्दी</a>
+          <a class="px-space-xs py-space-xxs text-inverse-on-surface hover:text-on-primary-container transition-colors" href="hi/docs.html">हिन्दी</a>
         </div>
         <span class="hidden sm:inline-block opacity-40">|</span>
         <!-- Search bar shifted to top right (replacing screen reader tab) -->
@@ -405,36 +405,37 @@ html.font-size-increase {
         `).join('');
       }
 
-      // Load docs: try dynamic API first (dev server), fall back to static manifest (Netlify)
+      // Load docs: dev server API on localhost, direct static manifest on production (Netlify)
       let isLive = false;
 
       async function loadDocs() {
-        try {
-          const res = await fetch(`/api/docs?category=${currentCategory}&t=${Date.now()}`);
-          if (res.ok) {
-            isLive = true;
-            const data = await res.json();
-            const curr = JSON.stringify(currentDocs.map(d => ({ f: d.filename, m: d.mtime })));
-            const next = JSON.stringify(data.map(d => ({ f: d.filename, m: d.mtime })));
-            if (curr !== next) {
-              currentDocs = data;
-              renderDocs();
-            }
-            return;
-          }
-        } catch (_) { /* dev server not running – expected on Netlify */ }
-
-        // Static fallback: load the pre-built JSON manifest for this category
-        if (currentDocs.length === 0) {
+        const isLocal = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+        if (isLocal) {
           try {
-            const res = await fetch(`/assets/data/docs-${currentCategory}.json`);
+            const res = await fetch(`/api/docs?category=${currentCategory}&t=${Date.now()}`);
             if (res.ok) {
-              currentDocs = await res.json();
-              renderDocs();
+              isLive = true;
+              const data = await res.json();
+              const curr = JSON.stringify(currentDocs.map(d => ({ f: d.filename, m: d.mtime })));
+              const next = JSON.stringify(data.map(d => ({ f: d.filename, m: d.mtime })));
+              if (curr !== next) {
+                currentDocs = data;
+                renderDocs();
+              }
+              return;
             }
-          } catch (e) {
-            console.warn('Static docs manifest also unavailable:', e);
+          } catch (_) { /* dev server not running */ }
+        }
+
+        // Static manifest: load the pre-built JSON manifest for this category
+        try {
+          const res = await fetch(`/assets/data/docs-${currentCategory}.json`);
+          if (res.ok) {
+            currentDocs = await res.json();
+            renderDocs();
           }
+        } catch (e) {
+          console.warn('Docs manifest unavailable:', e);
         }
       }
 

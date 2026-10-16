@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>शीघ्र उपलब्ध – पुरातत्व संस्थान</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-primary":"#ffb5a0","outline":"#88726c","surface":"#fdf9f4","secondary":"#655d59","on-primary-fixed":"#3b0900","primary-fixed":"#ffdbd1","on-primary":"#ffffff","secondary-container":"#ece0db","tertiary":"#593400","surface-dim":"#ddd9d5","on-surface":"#1c1c19","secondary-fixed-dim":"#cfc4bf","primary-container":"#8c3b24","on-secondary-fixed-variant":"#4d4542","error-container":"#ffdad6","on-error":"#ffffff","on-error-container":"#93000a","tertiary-fixed-dim":"#fbba6f","inverse-surface":"#31302d","on-secondary-container":"#6b635f","surface-tint":"#99452d","on-primary-fixed-variant":"#7b2e18","background":"#fdf9f4","surface-bright":"#fdf9f4","tertiary-container":"#784904","on-secondary":"#ffffff","surface-container-high":"#ebe8e3","surface-container-highest":"#e6e2dd","on-tertiary-container":"#fdbb70","primary":"#6e2510","tertiary-fixed":"#ffddba","secondary-fixed":"#ece0db","inverse-on-surface":"#f4f0eb","on-tertiary-fixed-variant":"#673d00","on-tertiary":"#ffffff","surface-container-low":"#f7f3ee","primary-fixed-dim":"#ffb5a0","surface-container":"#f1ede8","on-primary-container":"#ffb7a4","on-background":"#1c1c19","surface-container-lowest":"#ffffff","outline-variant":"#dbc1ba","on-surface-variant":"#55433e","on-secondary-fixed":"#201a18","error":"#ba1a1a","surface-variant":"#e6e2dd","on-tertiary-fixed":"#2b1700"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter-desktop":"2rem","space-3xl":"4rem","space-4xl":"6rem","space-xs":"0.5rem","space-2xl":"3rem","container-max":"1280px","space-xxs":"0.25rem","margin-mobile":"1rem","space-lg":"1.5rem","margin-tablet":"2rem","gutter-mobile":"1rem","gutter-tablet":"1.5rem","space-xl":"2rem","space-sm":"0.75rem","space-md":"1rem","margin-desktop":"3rem"},"fontFamily":{"title-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"display-hero-mobile":["Noto Serif"],"headline-sm":["Noto Serif"],"display-hero":["Noto Serif"],"headline-md":["Noto Serif"],"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-lg":["Noto Serif"],"title-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Noto Serif"]},"fontSizing":{"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"600"}]}}}}
+  </script>
+
+  <style>
+    body { font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Noto Serif Devanagari', 'Noto Serif', serif; }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.4; transform: scale(0.75); }
+    }
+    .pulse-dot {
+      animation: pulse-dot 1.8s ease-in-out infinite;
+    }
+    .sandstone-bg {
+      background-color: #fdf9f4;
+      background-image:
+        radial-gradient(ellipse at 20% 40%, rgba(110,37,16,0.06) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 70%, rgba(89,52,0,0.05) 0%, transparent 55%);
+    }
+    @keyframes tick {
+      0%   { transform: translateY(-2px); opacity: 0.6; }
+      100% { transform: translateY(0);    opacity: 1;   }
+    }
+    .tick-anim {
+      animation: tick 0.25s ease-out;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-surface text-on-surface">
+
+  <!-- SOVEREIGN BAR -->
+  <div class="bg-[#4a0f00] text-white py-1.5 px-4 text-xs font-semibold tracking-wide">
+    <div class="max-w-[1280px] mx-auto flex items-center justify-between gap-4 flex-wrap">
+      <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-[18px] opacity-90">account_balance</span>
+        <span class="uppercase tracking-widest text-[10px] font-bold opacity-90">भारत सरकार | Government of India</span>
+        <span class="opacity-40 hidden sm:inline">|</span>
+        <span class="hidden sm:inline uppercase tracking-widest text-[10px] opacity-75">संस्कृति मंत्रालय | Ministry of Culture</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="../coming-soon.html" class="text-[10px] uppercase tracking-widest opacity-80 hover:opacity-100 transition-opacity">English</a>
+        <span class="opacity-40">|</span>
+        <a href="index.html" class="text-[10px] uppercase tracking-widest opacity-80 hover:opacity-100 transition-opacity">← मुख्य पृष्ठ पर वापस जाएँ</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- INSTITUTE IDENTITY STRIP -->
+  <header class="bg-surface border-b border-outline-variant py-4 px-4 shadow-sm">
+    <div class="max-w-[1280px] mx-auto flex items-center gap-4">
+      <a href="index.html" class="flex items-center gap-4 group">
+        <img src="/assets/images/ioa-logo.svg" alt="पुरातत्व संस्थान लोगो"
+             class="h-14 w-auto"
+             onerror="this.outerHTML='<div class=\'h-14 w-14 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold text-lg\'>IoA</div>'" />
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.18em] font-bold text-primary opacity-80">
+            भारतीय पुरातत्व सर्वेक्षण
+          </p>
+          <h1 class="text-xl font-semibold text-on-surface leading-tight group-hover:text-primary transition-colors">
+            पुरातत्व संस्थान
+          </h1>
+          <p class="text-[10px] text-on-surface-variant tracking-wide mt-0.5">
+            पं. दीनदयाल उपाध्याय परिसर, ग्रेटर नोएडा
+          </p>
+        </div>
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-1 sandstone-bg flex items-center justify-center px-4 py-16">
+    <div class="max-w-2xl w-full mx-auto text-center">
+
+      <!-- Pulsing indicator -->
+      <div class="flex items-center justify-center gap-2.5 mb-8">
+        <span class="pulse-dot inline-block h-2.5 w-2.5 rounded-full bg-primary"></span>
+        <span class="text-[11px] uppercase tracking-[0.2em] font-bold text-primary">निर्माणाधीन</span>
+      </div>
+
+      <!-- Material Icon -->
+      <div class="flex justify-center mb-6">
+        <span class="material-symbols-outlined text-primary opacity-20 select-none"
+              style="font-size: 96px; font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 48;">
+          construction
+        </span>
+      </div>
+
+      <!-- Dynamic page title -->
+      <h2 id="page-title"
+          class="text-3xl sm:text-4xl font-semibold text-on-surface mb-4 leading-snug">
+        <!-- Filled by JS -->
+      </h2>
+
+      <!-- Subtext -->
+      <p class="text-on-surface-variant text-base leading-relaxed max-w-lg mx-auto mb-10">
+        पुरातत्व संस्थान की वेबसाइट का यह अनुभाग वर्तमान में निर्माणाधीन है।
+        कृपया शीघ्र ही पुनः देखें।
+      </p>
+
+      <!-- Countdown Timer -->
+      <div class="mb-10">
+        <p class="text-[11px] uppercase tracking-[0.18em] font-bold text-on-surface-variant mb-4">
+          1 अप्रैल 2027 को प्रारंभ
+        </p>
+        <div class="grid grid-cols-4 gap-3 sm:gap-4 max-w-md mx-auto">
+          <!-- Days -->
+          <div class="bg-inverse-surface rounded-xl p-3 sm:p-4 flex flex-col items-center gap-1">
+            <span id="cd-days"
+                  class="text-3xl sm:text-4xl font-bold text-primary-fixed leading-none">
+              00
+            </span>
+            <span class="text-[10px] sm:text-[11px] font-semibold text-white/60">
+              दिन
+            </span>
+          </div>
+          <!-- Hours -->
+          <div class="bg-inverse-surface rounded-xl p-3 sm:p-4 flex flex-col items-center gap-1">
+            <span id="cd-hours"
+                  class="text-3xl sm:text-4xl font-bold text-primary-fixed leading-none">
+              00
+            </span>
+            <span class="text-[10px] sm:text-[11px] font-semibold text-white/60">
+              घंटे
+            </span>
+          </div>
+          <!-- Minutes -->
+          <div class="bg-inverse-surface rounded-xl p-3 sm:p-4 flex flex-col items-center gap-1">
+            <span id="cd-minutes"
+                  class="text-3xl sm:text-4xl font-bold text-primary-fixed leading-none">
+              00
+            </span>
+            <span class="text-[10px] sm:text-[11px] font-semibold text-white/60">
+              मिनट
+            </span>
+          </div>
+          <!-- Seconds -->
+          <div class="bg-inverse-surface rounded-xl p-3 sm:p-4 flex flex-col items-center gap-1">
+            <span id="cd-seconds"
+                  class="text-3xl sm:text-4xl font-bold text-primary-fixed leading-none">
+              00
+            </span>
+            <span class="text-[10px] sm:text-[11px] font-semibold text-white/60">
+              सेकंड
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Button -->
+      <a href="index.html"
+         class="inline-flex items-center gap-2 bg-primary text-on-primary font-semibold text-sm px-6 py-3 rounded-lg hover:bg-primary-container transition-colors shadow-md hover:shadow-lg mb-6">
+        <span class="material-symbols-outlined text-base leading-none">arrow_back</span>
+        मुख्य पृष्ठ पर वापस जाएँ
+      </a>
+
+      <!-- Secondary link -->
+      <p class="text-sm text-on-surface-variant mt-4">
+        इस बीच, हमारे उपलब्ध पाठ्यक्रमों का अवलोकन करें&nbsp;
+        <a href="index.html#courses-offered"
+           class="text-primary font-semibold underline underline-offset-2 hover:text-primary-container transition-colors">
+          उपलब्ध पाठ्यक्रम
+        </a>
+      </p>
+
+    </div>
+  </main>
+
+  <!-- COPYRIGHT FOOTER STRIP -->
+  <footer class="bg-inverse-surface text-inverse-on-surface py-4 px-4">
+    <div class="max-w-[1280px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] opacity-80">
+      <span>
+        © <span id="footer-year"></span> पुरातत्व संस्थान, भारतीय पुरातत्व सर्वेक्षण। सर्वाधिकार सुरक्षित।
+      </span>
+      <span class="hidden sm:inline opacity-50">|</span>
+      <span>
+        संस्कृति मंत्रालय, भारत सरकार
+      </span>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    (function () {
+      const params   = new URLSearchParams(window.location.search);
+      const pageName = params.get('page') || 'यह पृष्ठ';
+
+      document.title = pageName + ' – शीघ्र उपलब्ध | पुरातत्व संस्थान';
+
+      const el = document.getElementById('page-title');
+      if (el) el.textContent = pageName + ' – शीघ्र उपलब्ध';
+    })();
+
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    const LAUNCH_DATE = new Date('2027-04-01T00:00:00+05:30').getTime();
+
+    function pad(n) { return String(n).padStart(2, '0'); }
+
+    function animateTick(el) {
+      el.classList.remove('tick-anim');
+      void el.offsetWidth;
+      el.classList.add('tick-anim');
+    }
+
+    let prevValues = { days: null, hours: null, minutes: null, seconds: null };
+
+    function updateCountdown() {
+      const now  = Date.now();
+      const diff = Math.max(0, LAUNCH_DATE - now);
+
+      const totalSeconds = Math.floor(diff / 1000);
+      const days    = Math.floor(totalSeconds / 86400);
+      const hours   = Math.floor((totalSeconds % 86400) / 3600);
+      const minutes = Math.floor((totalSeconds % 3600)  / 60);
+      const seconds = totalSeconds % 60;
+
+      const elDays    = document.getElementById('cd-days');
+      const elHours   = document.getElementById('cd-hours');
+      const elMinutes = document.getElementById('cd-minutes');
+      const elSeconds = document.getElementById('cd-seconds');
+
+      if (days    !== prevValues.days)    { elDays.textContent    = pad(days);    animateTick(elDays);    prevValues.days    = days;    }
+      if (hours   !== prevValues.hours)   { elHours.textContent   = pad(hours);   animateTick(elHours);   prevValues.hours   = hours;   }
+      if (minutes !== prevValues.minutes) { elMinutes.textContent = pad(minutes); animateTick(elMinutes); prevValues.minutes = minutes; }
+      if (seconds !== prevValues.seconds) { elSeconds.textContent = pad(seconds); animateTick(elSeconds); prevValues.seconds = seconds; }
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
