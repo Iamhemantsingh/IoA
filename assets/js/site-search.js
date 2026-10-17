@@ -59,14 +59,6 @@
       keywords: ["research", "excavation", "field", "sinauli", "stratigraphy", "archaeological survey", "report", "trenching"]
     },
     {
-      title: "Sinauli Excavation Interim Report (PDF)",
-      desc: "Official excavation and survey interim research report",
-      category: "Research Document",
-      icon: "picture_as_pdf",
-      url: "/assets/docs/research-excavation/Sinauli_Excavation_Interim_Report_2026.pdf",
-      keywords: ["sinauli", "excavation", "report", "interim", "chariot", "copper hoard", "pdf", "research"]
-    },
-    {
       title: "Photo Gallery & Visual Archives",
       desc: "Field excavations, seminars, convocation, and monumental campus photos",
       category: "Gallery",
@@ -137,14 +129,6 @@
       icon: "campaign",
       url: prefix + "docs.html?category=notifications-tenders",
       keywords: ["notifications", "tenders", "rfp", "procurement", "auction", "bids", "e-tender", "gazetted", "notices"]
-    },
-    {
-      title: "E-Tender Notice: Campus Equipment (PDF)",
-      desc: "Procurement and supply tender document for campus laboratory equipment",
-      category: "Tenders Document",
-      icon: "picture_as_pdf",
-      url: "/assets/docs/notifications-tenders/E-Tender_Notice_Campus_Equipment_2026.pdf",
-      keywords: ["tender notice", "equipment", "procurement", "pdf", "campus equipment"]
     },
     {
       title: "Who's Who - Directory of Officers",
